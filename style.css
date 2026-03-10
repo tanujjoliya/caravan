@@ -1,0 +1,222 @@
+
+.parent{
+  overflow-x: hidden;
+    background-color: #001528;
+    position: relative;
+    
+}
+
+.maintext{
+    font-family: myfont;
+    color: #FFD99F;
+    font-weight: 400;
+}
+
+
+@font-face {
+    font-family: myFont; /* set name */
+    src: url(./public/font/Edensor-Free.otf); /* url of the font */
+    
+  }
+
+  @font-face {
+    font-family: fasthand; /* set name */
+    src: url(./public/font/Fasthand-Regular.ttf); /* url of the font */
+    
+  }
+
+
+
+
+@media screen and (max-width: 750px) {
+    #mobile-box-radiu{
+border-radius: 14rem 14rem 0% 0%;
+    }
+#mobile-box-radiu2{
+    border-radius: 14rem 14rem 0% 0%;
+    display: none;
+
+}
+
+
+}
+
+/* .box-1{
+    height: 100vh;
+    width: 100vw;
+}
+.menubar{
+
+    display: flex;
+}
+
+.nav-sec{
+    background-color: red;
+    display: flex;
+    gap: 10vw;
+    
+} */
+
+
+
+
+
+
+.taviraj-thin {
+    font-family: "Taviraj", serif;
+    font-weight: 100;
+    font-style: normal;
+  }
+  
+  .taviraj-extralight {
+    font-family: "Taviraj", serif;
+    font-weight: 200;
+    font-style: normal;
+  }
+  
+  .taviraj-light {
+    font-family: "Taviraj", serif;
+    font-weight: 300;
+    font-style: normal;
+  }
+  
+  .taviraj-regular {
+    font-family: "Taviraj", serif;
+    font-weight: 400;
+    font-style: normal;
+  }
+  
+  .taviraj-medium {
+    font-family: "Taviraj", serif;
+    font-weight: 500;
+    font-style: normal;
+    /* line-height: 30px; */
+  }
+  
+  .taviraj-semibold {
+    font-family: "Taviraj", serif;
+    font-weight: 600;
+    font-style: normal;
+  }
+  
+  .taviraj-bold {
+    font-family: "Taviraj", serif;
+    font-weight: 700;
+    font-style: normal;
+  }
+  
+  .taviraj-extrabold {
+    font-family: "Taviraj", serif;
+    font-weight: 800;
+    font-style: normal;
+  }
+  
+  .taviraj-black {
+    font-family: "Taviraj", serif;
+    font-weight: 900;
+    font-style: normal;
+  }
+  
+  .taviraj-thin-italic {
+    font-family: "Taviraj", serif;
+    font-weight: 100;
+    font-style: italic;
+  }
+  
+  .taviraj-extralight-italic {
+    font-family: "Taviraj", serif;
+    font-weight: 200;
+    font-style: italic;
+  }
+  
+  .taviraj-light-italic {
+    font-family: "Taviraj", serif;
+    font-weight: 300;
+    font-style: italic;
+  }
+  
+  .taviraj-regular-italic {
+    font-family: "Taviraj", serif;
+    font-weight: 400;
+    font-style: italic;
+  }
+  
+  .taviraj-medium-italic {
+    font-family: "Taviraj", serif;
+    font-weight: 500;
+    font-style: italic;
+  }
+  
+  .taviraj-semibold-italic {
+    font-family: "Taviraj", serif;
+    font-weight: 600;
+    font-style: italic;
+  }
+  
+  .taviraj-bold-italic {
+    font-family: "Taviraj", serif;
+    font-weight: 700;
+    font-style: italic;
+  }
+  
+  .taviraj-extrabold-italic {
+    font-family: "Taviraj", serif;
+    font-weight: 800;
+    font-style: italic;
+  }
+  
+  .taviraj-black-italic {
+    font-family: "Taviraj", serif;
+    font-weight: 900;
+    font-style: italic;
+  }
+
+
+
+
+@keyframes fadeInUp {
+  from { opacity: 0; transform: translateY(30px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+@keyframes fadeInLeft {
+  from { opacity: 0; transform: translateX(-30px); }
+  to { opacity: 1; transform: translateX(0); }
+}
+@keyframes fadeInRight {
+  from { opacity: 0; transform: translateX(30px); }
+  to { opacity: 1; transform: translateX(0); }
+}
+  
+
+
+
+/* menu bar */
+
+
+.menu-open .mobile-link {
+  animation: fadeInUp 0.5s ease forwards;
+}
+.menu-open .mobile-link:nth-child(1) { animation-delay: 0.3s; }
+.menu-open .mobile-link:nth-child(2) { animation-delay: 0.4s; }
+.menu-open .mobile-link:nth-child(3) { animation-delay: 0.5s; }
+.menu-open .mobile-link:nth-child(4) { animation-delay: 0.6s; }
+.menu-open .mobile-link:nth-child(5) { animation-delay: 0.7s; }
+
+@keyframes fadeInUp {
+  from { opacity: 0; transform: translateY(20px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+
+
+
+
+/* about sec */
+
+@keyframes marquee {
+  0% { transform: translateX(0%); }
+  100% { transform: translateX(-50%); }
+}
+.animate-marquee {
+  animation: marquee 25s linear infinite;
+}

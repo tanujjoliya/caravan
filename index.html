@@ -1,0 +1,725 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+    <script src="https://cdn.jsdelivr.net/npm/alpinejs@3.x.x/dist/cdn.min.js" defer></script>
+   
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Taviraj:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
+
+<link rel="stylesheet" href="style.css">
+<style>
+  /* Animation Keyframes */
+  @keyframes fadeInUp {
+    from { opacity: 0; transform: translateY(30px); }
+    to { opacity: 1; transform: translateY(0); }
+  }
+  @keyframes fadeInLeft {
+    from { opacity: 0; transform: translateX(-50px); }
+    to { opacity: 1; transform: translateX(0); }
+  }
+  @keyframes fadeInDown {
+    from { opacity: 0; transform: translateY(-30px); }
+    to { opacity: 1; transform: translateY(0); }
+  }
+  </style>
+</head>
+<body>
+<div class=" overflow-hidden">
+  <div class="child1 text-[#fff] min-h-screen bg-[#1B2D1F] overflow-hidden selection:bg-[#FFD99F] selection:text-[#1B2D1F]">
+    <div class="flex gap-10 flex-col relative">
+        
+      <nav class="relative z-50 transition-all duration-1000 ease-out">
+        <div class="h-[10vh] flex justify-center items-end relative">
+            <div class="absolute h-[1px] w-[91.99%] bg-[#FFD99F] opacity-30"></div>
+            <div class="absolute h-[1px] w-[93.5%] bg-[#FFD99F]"></div>
+        </div>
+    
+        <div class="relative h-[9vh] flex justify-center">
+            <div class="w-[94%] items-center flex justify-between leading-[30px] text-[18px] text-white">
+                
+                <div class="hidden md:flex items-center gap-10 w-[50%]">
+                    <a href="./index.html" class="cursor-pointer hover:text-[#FFD99F] transition-colors duration-300 relative group">
+                        Home
+                        <span class="absolute -bottom-1 left-0 w-0 h-0.5 bg-[#FFD99F] transition-all duration-300 group-hover:w-full"></span>
+                    </a>
+                    <a href="./about.html" class="cursor-pointer hover:text-[#FFD99F] transition-colors duration-300 relative group">
+                        About
+                        <span class="absolute -bottom-1 left-0 w-0 h-0.5 bg-[#FFD99F] transition-all duration-300 group-hover:w-full"></span>
+                    </a>
+                    <a href="./menu.html" class="cursor-pointer hover:text-[#FFD99F] transition-colors duration-300 relative group">
+                        Menu
+                        <span class="absolute -bottom-1 left-0 w-0 h-0.5 bg-[#FFD99F] transition-all duration-300 group-hover:w-full"></span>
+                    </a>
+                    <a href="./contact.html" class="cursor-pointer hover:text-[#FFD99F] transition-colors duration-300 relative group">
+                        Contact
+                        <span class="absolute -bottom-1 left-0 w-0 h-0.5 bg-[#FFD99F] transition-all duration-300 group-hover:w-full"></span>
+                    </a>
+                </div>
+    
+                <div class="md:hidden font-serif text-[#FFD99F] text-xl font-bold">
+                    BISTROVIA
+                </div>
+    
+                <div class="flex items-center gap-6">
+                    <button class="hidden sm:block px-6 py-2 rounded-full border border-[#FFD99F] text-[#FFD99F] hover:bg-[#FFD99F] hover:text-[#1B2D1F] transition-all duration-500 transform hover:scale-105 active:scale-95 whitespace-nowrap">
+                        Reserve table
+                    </button>
+    
+                    <button onclick="toggleMenu()" class="md:hidden flex flex-col gap-1.5 z-[100] relative p-2">
+                        <span id="line1" class="w-8 h-0.5 bg-[#FFD99F] transition-all duration-300 origin-center"></span>
+                        <span id="line2" class="w-8 h-0.5 bg-[#FFD99F] transition-all duration-300"></span>
+                        <span id="line3" class="w-8 h-0.5 bg-[#FFD99F] transition-all duration-300 origin-center"></span>
+                    </button>
+                </div>
+            </div>
+        </div>
+    
+        <div id="mobileMenu" class="fixed inset-0 bg-[#1B2D1F] z-[90] flex flex-col items-center justify-center gap-8 text-2xl font-serif translate-x-full transition-transform duration-500 ease-in-out">
+            <a href="#" class="mobile-link opacity-0 hover:text-[#FFD99F] transition-all">Home</a>
+            <a href="./about.html" class="mobile-link opacity-0 hover:text-[#FFD99F] transition-all">About</a>
+            <a href="./menu.html" class="mobile-link opacity-0 hover:text-[#FFD99F] transition-all">Menu</a>
+            <a href="./contact.html" class="mobile-link opacity-0 hover:text-[#FFD99F] transition-all">Contact</a>
+            <button class="mt-4 px-8 py-3 rounded-full border border-[#FFD99F] text-[#FFD99F] mobile-link opacity-0">
+                Reserve table
+            </button>
+        </div>
+    </nav>
+
+        <div class="flex items-center flex-col font-serif justify-center px-4">
+            <h1 class="maintext text-[9vw] mt-6 uppercase leading-none text-center animate-[bounce_3s_infinite_alternate] brightness-125">
+                caravan kabob 
+            </h1>
+            
+            <div class="mt-8 opacity-0 animate-[fadeIn_1s_ease-out_0.5s_forwards]">
+                <button class="group relative flex items-center gap-4 bg-[#1B2B1D] text-[#FDF6E3] px-10 py-5 rounded-full transition-all duration-500 hover:shadow-[0_0_30px_rgba(255,217,159,0.2)]">
+                    <div class="absolute inset-1 border border-[#FDF6E3]/20 rounded-full group-hover:inset-0 group-hover:border-[#FDF6E3]/50 transition-all duration-500"></div>
+                    <div class="absolute inset-0 border border-[#FDF6E3] rounded-full"></div>
+                    <span class="text-xl relative z-10">More about</span>
+                    <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6 relative z-10 transition-transform duration-500 group-hover:translate-x-3" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="1.5">
+                        <path stroke-linecap="round" stroke-linejoin="round" d="M17 8l4 4m0 0l-4 4m4-4H3" />
+                    </svg>
+                </button>
+            </div>
+        </div>
+
+        <div class="flex justify-center mt-12 px-4 pb-20">
+            <div class="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-5 w-full max-w-[94%] gap-6 items-end">
+                
+                <div class="opacity-0 animate-[fadeInUp_0.8s_ease-out_0.6s_forwards] group">
+                    <div class="bg-[#FFF4DE] h-[30vh] md:h-[35vh] rounded-tr-[120px] overflow-hidden transition-all duration-700 group-hover:-translate-y-6 group-hover:rotate-1 shadow-xl">
+                        <img src="./public/images/img1.avif" class="w-full h-full object-cover scale-110 group-hover:scale-100 transition-transform duration-1000" />
+                    </div>
+                </div>
+
+                <div class="opacity-0 animate-[fadeInUp_0.8s_ease-out_0.8s_forwards] group">
+                    <div class="bg-[#FFF4DE] h-[35vh] md:h-[42vh] rounded-t-full overflow-hidden transition-all duration-700 group-hover:-translate-y-6 group-hover:-rotate-1 shadow-xl">
+                        <img src="./public/images/img2.avif" class="w-full h-full object-cover scale-110 group-hover:scale-100 transition-transform duration-1000" />
+                    </div>
+                </div>
+
+                <div class="opacity-0 animate-[fadeInUp_0.8s_ease-out_1s_forwards] group">
+                    <div class="bg-[#FFF4DE] h-[40vh] md:h-[50vh] rounded-t-full border-[1px] border-[#FFD99F]/20 overflow-hidden transition-all duration-700 group-hover:-translate-y-10 shadow-2xl">
+                        <img src="./public/images/img3.avif" class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-1000" />
+                    </div>
+                </div>
+
+                <div class="opacity-0 animate-[fadeInUp_0.8s_ease-out_1.2s_forwards] group">
+                    <div class="bg-[#FFF4DE] h-[35vh] md:h-[42vh] rounded-t-full overflow-hidden transition-all duration-700 group-hover:-translate-y-6 group-hover:rotate-1 shadow-xl">
+                        <img src="./public/images/img4.avif" class="w-full h-full object-cover scale-110 group-hover:scale-100 transition-transform duration-1000" />
+                    </div>
+                </div>
+
+                <div class="opacity-0 animate-[fadeInUp_0.8s_ease-out_1.4s_forwards] group">
+                    <div class="bg-[#FFF4DE] h-[30vh] md:h-[35vh] rounded-tl-[120px] overflow-hidden transition-all duration-700 group-hover:-translate-y-6 group-hover:-rotate-1 shadow-xl">
+                        <img src="./public/images/img5.avif" class="w-full h-full object-cover scale-110 group-hover:scale-100 transition-transform duration-1000" />
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </div>
+</div>
+
+
+
+
+
+
+
+<!-- child2  sec 2-->
+<div class="child2 text-[#001f3f] bg-[#FFF4DE] py-20 overflow-hidden">
+  <div class="aboutchild flex justify-center mb-20">
+      <div class="headings pt-8 w-[85%] lg:w-[65%] flex flex-col justify-center items-center">
+          <h1 class="font-['fasthand'] text-[5vw] md:text-[2.3vw] text-[#8B4513] animate-[fadeIn_1.5s_ease-out]">
+              For the best memories
+          </h1>
+          <h1 id="lgtext" class="font-['Taviraj'] font-[600] text-[3.5vh] md:text-[4.4vh] leading-tight md:leading-[48px] text-center mt-4 opacity-0 animate-[fadeInUp_1s_ease-out_0.3s_forwards]">
+              Enjoy some of the most special exquisite and delicious dishes with all our unique recipes. We guarantee a taste you won’t forget!
+          </h1>
+      </div>
+  </div>
+
+  <div id="gridsec" class="w-full flex justify-center">
+      <div class="flex flex-col md:flex-row w-[90%] gap-8 lg:gap-14">
+          
+          <div class="about-wrapper flex-1 opacity-0 animate-[fadeInUp_1s_ease-out_0.5s_forwards] group">
+              <div class="relative w-full text-center">
+                  <div class="relative overflow-hidden rounded-t-full shadow-2xl transition-transform duration-700 group-hover:scale-[1.02]">
+                      <img 
+                          src="https://images.unsplash.com/photo-1517248135467-4c7edcad34c4?auto=format&fit=crop&w=800&q=80" 
+                          alt="Premium Dining" 
+                          class="h-[45vh] w-full object-cover transition-transform duration-1000 group-hover:scale-110"
+                      />
+                      <div class="absolute left-1/2 bottom-0 flex h-20 w-20 -translate-x-1/2 translate-y-1/2 items-center justify-center rounded-full border border-[#001f3f] bg-[#FFF4DE] shadow-xl z-20 group-hover:rotate-[360deg] transition-transform duration-1000">
+                           <svg class="h-10 w-10 text-[#001f3f]" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M3 20h18M5 20v-7a1 1 0 0 1 1-1h12a1 1 0 0 1 1 1v7M9 12v-4a3 3 0 0 1 6 0v4M12 8v1"/></svg>
+                      </div>
+                  </div>
+                  <div class="mt-16 px-4">
+                      <h2 class="mb-4 text-3xl font-bold font-serif">Premium dining</h2>
+                      <p class="leading-relaxed opacity-70">Lorem ipsum dolor sit amet with consectetur isicing elit sed do eiusmod</p>
+                  </div>
+              </div>
+          </div>
+
+          <div class="about-wrapper flex-1 md:mt-32 opacity-0 animate-[fadeInUp_1s_ease-out_0.8s_forwards] group">
+              <div class="relative w-full text-center">
+                  <div class="relative overflow-hidden rounded-t-full shadow-2xl transition-transform duration-700 group-hover:scale-[1.02]">
+                      <img 
+                          src="https://images.unsplash.com/photo-1559339352-11d035aa65de?auto=format&fit=crop&w=800&q=80" 
+                          alt="Exquisite Taste" 
+                          class="h-[45vh] w-full object-cover transition-transform duration-1000 group-hover:scale-110"
+                      />
+                      <div class="absolute left-1/2 bottom-0 flex h-20 w-20 -translate-x-1/2 translate-y-1/2 items-center justify-center rounded-full border border-[#001f3f] bg-[#FFF4DE] shadow-xl z-20 group-hover:rotate-[360deg] transition-transform duration-1000">
+                           <svg class="h-10 w-10 text-[#001f3f]" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
+                      </div>
+                  </div>
+                  <div class="mt-16 px-4">
+                      <h2 class="mb-4 text-3xl font-bold font-serif">Exquisite Taste</h2>
+                      <p class="leading-relaxed opacity-70">Experience the finest culinary art curated by world-class chefs.</p>
+                  </div>
+              </div>
+          </div>
+
+          <div class="about-wrapper flex-1 opacity-0 animate-[fadeInUp_1s_ease-out_1.1s_forwards] group">
+              <div class="relative w-full text-center">
+                  <div class="relative overflow-hidden rounded-t-full shadow-2xl transition-transform duration-700 group-hover:scale-[1.02]">
+                      <img 
+                          src="https://images.unsplash.com/photo-1550966841-3ee205297151?auto=format&fit=crop&w=800&q=80" 
+                          alt="Unique Recipes" 
+                          class="h-[45vh] w-full object-cover transition-transform duration-1000 group-hover:scale-110"
+                      />
+                      <div class="absolute left-1/2 bottom-0 flex h-20 w-20 -translate-x-1/2 translate-y-1/2 items-center justify-center rounded-full border border-[#001f3f] bg-[#FFF4DE] shadow-xl z-20 group-hover:rotate-[360deg] transition-transform duration-1000">
+                           <svg class="h-10 w-10 text-[#001f3f]" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg>
+                      </div>
+                  </div>
+                  <div class="mt-16 px-4">
+                      <h2 class="mb-4 text-3xl font-bold font-serif">Unique Recipes</h2>
+                      <p class="leading-relaxed opacity-70">Traditional secrets blended with modern cooking techniques.</p>
+                  </div>
+              </div>
+          </div>
+
+      </div>
+  </div>
+</div>
+
+
+
+
+
+
+
+
+<!-- child 3 sec 3 -->
+<div class="child3 bg-[#001528] font-[Taviraj] py-16 px-4 overflow-hidden">
+    
+  <div class="flex justify-center mb-12">
+      <div class="flex flex-col md:flex-row items-center w-full max-w-[90%] text-[#fff] justify-between gap-8">
+          <h1 class="text-[10vw] md:text-[4vw] leading-tight text-center md:text-left opacity-0 animate-[fadeInLeft_1s_ease-out_forwards]">
+              Our delicious menu
+          </h1>
+          
+          <div class="opacity-0 animate-[fadeInRight_1s_ease-out_0.2s_forwards]">
+              <button class="group relative flex items-center gap-4 bg-[#1B2B1D] text-[#FDF6E3] px-8 py-4 rounded-full transition-all duration-300 hover:scale-105 active:scale-95 shadow-lg hover:shadow-[#1B2B1D]/40">
+                  <div class="absolute inset-1 border border-[#FDF6E3]/30 rounded-full pointer-events-none group-hover:border-[#FDF6E3]/60 transition-colors"></div>
+                  <div class="absolute inset-0 border border-[#FDF6E3] rounded-full pointer-events-none"></div>
+                  <span class="text-xl font-serif relative z-10">See all menu</span>
+                  <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6 relative z-10 transform transition-transform duration-300 group-hover:translate-x-2" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="1.5">
+                      <path stroke-linecap="round" stroke-linejoin="round" d="M17 8l4 4m0 0l-4 4m4-4H3" />
+                  </svg>
+              </button>
+          </div>
+      </div>
+  </div>
+
+  <div class="mx-auto max-w-7xl px-4 flex flex-col gap-10">
+      <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8 md:gap-10">
+          
+          <div class="group relative flex flex-col overflow-hidden rounded-[45px] bg-[#001a31] border border-white/5 p-8 pb-0 text-white transition-all duration-500 hover:-translate-y-4 hover:shadow-[0_20px_50px_rgba(0,0,0,0.5)] opacity-0 animate-[fadeInUp_0.8s_ease-out_0.3s_forwards]">
+              <div class="mb-10 flex items-start justify-between">
+                  <div class="pr-2">
+                      <h2 class="font-serif text-2xl font-bold leading-tight group-hover:text-[#FFD99F] transition-colors">Pide lahmacun</h2>
+                      <p class="mt-2 font-sans text-lg font-light text-gray-400">$ 25.00 USD</p>
+                  </div>
+                  <button class="flex h-12 w-12 shrink-0 items-center justify-center rounded-full border border-gray-600 transition-all duration-500 group-hover:bg-[#FFD99F] group-hover:border-[#FFD99F] group-hover:text-[#001427] group-hover:rotate-45">
+                      <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14 5l7 7m0 0l-7 7m7-7H3" />
+                      </svg>
+                  </button>
+              </div>
+              <div class="mt-auto overflow-hidden rounded-t-full ring-8 ring-white/5 transition-all duration-500 group-hover:ring-[#FFD99F]/20">
+                  <img src="https://images.unsplash.com/photo-1513104890138-7c749659a591?auto=format&fit=crop&w=600" class="h-64 w-full object-cover transition-transform duration-700 group-hover:scale-110" />
+              </div>
+          </div>
+
+          <div class="group relative flex flex-col overflow-hidden rounded-[45px] bg-[#001a31] border border-white/5 p-8 pb-0 text-white transition-all duration-500 hover:-translate-y-4 hover:shadow-[0_20px_50px_rgba(0,0,0,0.5)] opacity-0 animate-[fadeInUp_0.8s_ease-out_0.4s_forwards]">
+              <div class="mb-10 flex items-start justify-between">
+                  <div>
+                      <h2 class="font-serif text-2xl font-bold leading-tight group-hover:text-[#FFD99F] transition-colors">Mexican salad</h2>
+                      <p class="mt-2 font-sans text-lg font-light text-gray-400">$ 30.00 USD</p>
+                  </div>
+                  <button class="flex h-12 w-12 shrink-0 items-center justify-center rounded-full border border-gray-600 transition-all duration-500 group-hover:bg-[#FFD99F] group-hover:border-[#FFD99F] group-hover:text-[#001427] group-hover:rotate-45">
+                      <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14 5l7 7m0 0l-7 7m7-7H3" /></svg>
+                  </button>
+              </div>
+              <div class="mt-auto overflow-hidden rounded-t-full ring-8 ring-white/5 transition-all duration-500 group-hover:ring-[#FFD99F]/20">
+                  <img src="https://images.unsplash.com/photo-1546069901-ba9599a7e63c?auto=format&fit=crop&w=600" class="h-64 w-full object-cover transition-transform duration-700 group-hover:scale-110" />
+              </div>
+          </div>
+
+          <div class="group relative flex flex-col overflow-hidden rounded-[45px] bg-[#001a31] border border-white/5 p-8 pb-0 text-white transition-all duration-500 hover:-translate-y-4 hover:shadow-[0_20px_50px_rgba(0,0,0,0.5)] opacity-0 animate-[fadeInUp_0.8s_ease-out_0.5s_forwards]">
+              <div class="mb-10 flex items-start justify-between">
+                  <div>
+                      <h2 class="font-serif text-2xl font-bold leading-tight group-hover:text-[#FFD99F] transition-colors">Mexican meal</h2>
+                      <p class="mt-2 font-sans text-lg font-light text-gray-400">$ 39.00 USD</p>
+                  </div>
+                  <button class="flex h-12 w-12 shrink-0 items-center justify-center rounded-full border border-gray-600 transition-all duration-500 group-hover:bg-[#FFD99F] group-hover:border-[#FFD99F] group-hover:text-[#001427] group-hover:rotate-45">
+                      <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14 5l7 7m0 0l-7 7m7-7H3" /></svg>
+                  </button>
+              </div>
+              <div class="mt-auto overflow-hidden rounded-t-full ring-8 ring-white/5 transition-all duration-500 group-hover:ring-[#FFD99F]/20">
+                  <img src="https://images.unsplash.com/photo-1565299624946-b28f40a0ae38?auto=format&fit=crop&w=600" class="h-64 w-full object-cover transition-transform duration-700 group-hover:scale-110" />
+              </div>
+          </div>
+
+          <div class="group relative flex flex-col overflow-hidden rounded-[45px] bg-[#001a31] border border-white/5 p-8 pb-0 text-white transition-all duration-500 hover:-translate-y-4 hover:shadow-[0_20px_50px_rgba(0,0,0,0.5)] opacity-0 animate-[fadeInUp_0.8s_ease-out_0.6s_forwards]">
+              <div class="mb-10 flex items-start justify-between">
+                  <div>
+                      <h2 class="font-serif text-2xl font-bold leading-tight group-hover:text-[#FFD99F] transition-colors">Quesadilla sliced</h2>
+                      <p class="mt-2 font-sans text-lg font-light text-gray-400">$ 25.00 USD</p>
+                  </div>
+                  <button class="flex h-12 w-12 shrink-0 items-center justify-center rounded-full border border-gray-600 transition-all duration-500 group-hover:bg-[#FFD99F] group-hover:border-[#FFD99F] group-hover:text-[#001427] group-hover:rotate-45">
+                      <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14 5l7 7m0 0l-7 7m7-7H3" /></svg>
+                  </button>
+              </div>
+              <div class="mt-auto overflow-hidden rounded-t-full ring-8 ring-white/5 transition-all duration-500 group-hover:ring-[#FFD99F]/20">
+                  <img src="https://images.unsplash.com/photo-1599974590461-7667d73017a4?auto=format&fit=crop&w=600" class="h-64 w-full object-cover transition-transform duration-700 group-hover:scale-110" />
+              </div>
+          </div>
+
+      </div>
+      <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8 md:gap-10">
+          
+        <div class="group relative flex flex-col overflow-hidden rounded-[45px] bg-[#001a31] border border-white/5 p-8 pb-0 text-white transition-all duration-500 hover:-translate-y-4 hover:shadow-[0_20px_50px_rgba(0,0,0,0.5)] opacity-0 animate-[fadeInUp_0.8s_ease-out_0.3s_forwards]">
+            <div class="mb-10 flex items-start justify-between">
+                <div class="pr-2">
+                    <h2 class="font-serif text-2xl font-bold leading-tight group-hover:text-[#FFD99F] transition-colors">Pide lahmacun</h2>
+                    <p class="mt-2 font-sans text-lg font-light text-gray-400">$ 25.00 USD</p>
+                </div>
+                <button class="flex h-12 w-12 shrink-0 items-center justify-center rounded-full border border-gray-600 transition-all duration-500 group-hover:bg-[#FFD99F] group-hover:border-[#FFD99F] group-hover:text-[#001427] group-hover:rotate-45">
+                    <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14 5l7 7m0 0l-7 7m7-7H3" />
+                    </svg>
+                </button>
+            </div>
+            <div class="mt-auto overflow-hidden rounded-t-full ring-8 ring-white/5 transition-all duration-500 group-hover:ring-[#FFD99F]/20">
+                <img src="https://images.unsplash.com/photo-1513104890138-7c749659a591?auto=format&fit=crop&w=600" class="h-64 w-full object-cover transition-transform duration-700 group-hover:scale-110" />
+            </div>
+        </div>
+
+        <div class="group relative flex flex-col overflow-hidden rounded-[45px] bg-[#001a31] border border-white/5 p-8 pb-0 text-white transition-all duration-500 hover:-translate-y-4 hover:shadow-[0_20px_50px_rgba(0,0,0,0.5)] opacity-0 animate-[fadeInUp_0.8s_ease-out_0.4s_forwards]">
+            <div class="mb-10 flex items-start justify-between">
+                <div>
+                    <h2 class="font-serif text-2xl font-bold leading-tight group-hover:text-[#FFD99F] transition-colors">Mexican salad</h2>
+                    <p class="mt-2 font-sans text-lg font-light text-gray-400">$ 30.00 USD</p>
+                </div>
+                <button class="flex h-12 w-12 shrink-0 items-center justify-center rounded-full border border-gray-600 transition-all duration-500 group-hover:bg-[#FFD99F] group-hover:border-[#FFD99F] group-hover:text-[#001427] group-hover:rotate-45">
+                    <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14 5l7 7m0 0l-7 7m7-7H3" /></svg>
+                </button>
+            </div>
+            <div class="mt-auto overflow-hidden rounded-t-full ring-8 ring-white/5 transition-all duration-500 group-hover:ring-[#FFD99F]/20">
+                <img src="https://images.unsplash.com/photo-1546069901-ba9599a7e63c?auto=format&fit=crop&w=600" class="h-64 w-full object-cover transition-transform duration-700 group-hover:scale-110" />
+            </div>
+        </div>
+
+        <div class="group relative flex flex-col overflow-hidden rounded-[45px] bg-[#001a31] border border-white/5 p-8 pb-0 text-white transition-all duration-500 hover:-translate-y-4 hover:shadow-[0_20px_50px_rgba(0,0,0,0.5)] opacity-0 animate-[fadeInUp_0.8s_ease-out_0.5s_forwards]">
+            <div class="mb-10 flex items-start justify-between">
+                <div>
+                    <h2 class="font-serif text-2xl font-bold leading-tight group-hover:text-[#FFD99F] transition-colors">Mexican meal</h2>
+                    <p class="mt-2 font-sans text-lg font-light text-gray-400">$ 39.00 USD</p>
+                </div>
+                <button class="flex h-12 w-12 shrink-0 items-center justify-center rounded-full border border-gray-600 transition-all duration-500 group-hover:bg-[#FFD99F] group-hover:border-[#FFD99F] group-hover:text-[#001427] group-hover:rotate-45">
+                    <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14 5l7 7m0 0l-7 7m7-7H3" /></svg>
+                </button>
+            </div>
+            <div class="mt-auto overflow-hidden rounded-t-full ring-8 ring-white/5 transition-all duration-500 group-hover:ring-[#FFD99F]/20">
+                <img src="https://images.unsplash.com/photo-1565299624946-b28f40a0ae38?auto=format&fit=crop&w=600" class="h-64 w-full object-cover transition-transform duration-700 group-hover:scale-110" />
+            </div>
+        </div>
+
+        <div class="group relative flex flex-col overflow-hidden rounded-[45px] bg-[#001a31] border border-white/5 p-8 pb-0 text-white transition-all duration-500 hover:-translate-y-4 hover:shadow-[0_20px_50px_rgba(0,0,0,0.5)] opacity-0 animate-[fadeInUp_0.8s_ease-out_0.6s_forwards]">
+            <div class="mb-10 flex items-start justify-between">
+                <div>
+                    <h2 class="font-serif text-2xl font-bold leading-tight group-hover:text-[#FFD99F] transition-colors">Quesadilla sliced</h2>
+                    <p class="mt-2 font-sans text-lg font-light text-gray-400">$ 25.00 USD</p>
+                </div>
+                <button class="flex h-12 w-12 shrink-0 items-center justify-center rounded-full border border-gray-600 transition-all duration-500 group-hover:bg-[#FFD99F] group-hover:border-[#FFD99F] group-hover:text-[#001427] group-hover:rotate-45">
+                    <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14 5l7 7m0 0l-7 7m7-7H3" /></svg>
+                </button>
+            </div>
+            <div class="mt-auto overflow-hidden rounded-t-full ring-8 ring-white/5 transition-all duration-500 group-hover:ring-[#FFD99F]/20">
+                <img src="https://images.unsplash.com/photo-1599974590461-7667d73017a4?auto=format&fit=crop&w=600" class="h-64 w-full object-cover transition-transform duration-700 group-hover:scale-110" />
+            </div>
+        </div>
+
+    </div>
+  </div>
+</div>
+
+
+
+<!-- child 4 sec 4-->
+<div class="reachout bg-[#FFF4DE] w-full py-12 md:py-24 overflow-hidden font-serif">
+  
+  <div class="flex justify-center opacity-0 animate-[fadeInDown_1s_ease-out_forwards]">
+    <h1 class="text-[12vw] font-[myfont] md:text-[7vw] mb-12 md:mb-20 uppercase text-[#001524] text-center px-4 leading-none">
+      Reach Out to us
+    </h1>
+  </div>
+
+  <div class="max-w-7xl mx-auto px-6">
+    <div class="flex flex-col md:flex-row items-center gap-12 md:gap-20">
+      
+      <div class="w-full md:w-1/2 opacity-0 animate-[fadeInLeft_1s_ease-out_0.4s_forwards]">
+        <div class="relative max-w-md mx-auto group">
+          <div class="rounded-t-full overflow-hidden aspect-[3/4] shadow-2xl transition-transform duration-700 group-hover:scale-[1.02]">
+            <img 
+              src="https://images.unsplash.com/photo-1513104890138-7c749659a591?auto=format&fit=crop&w=1000" 
+              alt="Gourmet Pizza" 
+              class="w-full h-full object-cover transition-transform duration-1000 group-hover:scale-110"
+            />
+          </div>
+          
+          <div class="absolute bottom-6 right-6 bg-[#001524] text-white p-5 rounded-full flex items-center justify-center shadow-2xl cursor-pointer hover:bg-[#1B2B1D] transition-colors duration-300">
+            <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6 md:h-8 md:w-8" fill="currentColor" viewBox="0 0 256 256">
+              <path d="M104,48V208a8,8,0,0,1-16,0V48a8,8,0,0,1,16,0Zm64,0V208a8,8,0,0,1-16,0V48a8,8,0,0,1,16,0Z"></path>
+            </svg>
+          </div>
+        </div>
+      </div>
+
+      <div class="w-full md:w-1/2 flex flex-col gap-12 text-[#001524] text-center md:text-left">
+        
+        <div class="opacity-0 animate-[fadeInUp_1s_ease-out_0.8s_forwards]">
+          <h1 class="text-[8vw] md:text-[4vw] font-bold font-[myfont] mb-4">Opening hours:</h1>
+          <div class="space-y-2 opacity-80">
+            <h2 class="text-xl md:text-2xl italic">Mon — Thu: 10:00AM – 09:00PM</h2>
+            <h2 class="text-xl md:text-2xl italic">Fri — Sun: 09:00AM – 11:00PM</h2>
+          </div>
+        </div>
+
+        <div class="opacity-0 animate-[fadeInUp_1s_ease-out_1.1s_forwards]">
+          <h1 class="text-[8vw] md:text-[4vw] font-bold font-[myfont] mb-4">Reach us:</h1>
+          <h2 class="text-xl md:text-2xl leading-relaxed opacity-80 max-w-sm mx-auto md:mx-0">
+            HS B26, Horton Ford Rd, Edison,<br>
+            TN, 37731
+          </h2>
+          
+          <a href="#" class="inline-block mt-8 text-lg font-bold border-b-2 border-[#001524] pb-1 hover:text-[#1B2B1D] hover:border-[#1B2B1D] transition-all">
+            Get Directions
+          </a>
+        </div>
+
+      </div>
+    </div>
+  </div>
+</div>
+
+
+
+  <!-- child 5 sec 5 -->
+  <div class="bg-[#1B2B1D] py-12 px-6 sm:py-20 font-serif text-[#FDF6E3]">
+    <div class="max-w-2xl mx-auto text-center mb-12 sm:mb-20">
+      <h2 class="text-[4vw] sm:text-[5.5vw] font-[myfont] mb-4 sm:mb-6">Meet our team</h2>
+      <p class="text-2xl sm:text-lg opacity-85 leading-relaxed font-['Taviraj'] max-w-lg mx-auto">
+        Prepare your taste buds for an unforgettable journey as we unveil our new Chef's Tasting sit amet, consectetur adipiscing elit, sed do eiusmod tempor.
+      </p>
+    </div>
+  
+    <div class="max-w-7xl mx-auto grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8 sm:gap-6 lg:gap-8">
+      
+      <div class="bg-[#FDF6E3] text-[#1B2B1D] p-5 sm:p-6 rounded-[2.5rem] rotate-0 sm:-rotate-3 hover:rotate-0 transition-all duration-300 shadow-xl">
+        <div class="flex justify-between items-start mb-6">
+          <div>
+            <h3 class="text-xl font-bold leading-tight">Janny Cooper</h3>
+            <p class="text-xs font-sans mt-1 opacity-70">Special chef</p>
+          </div>
+          <div class="border border-[#1B2B1D]/30 rounded-full p-2">
+            <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14 5l7 7m0 0l-7 7m7-7H3"></path></svg>
+          </div>
+        </div>
+        <div class="rounded-t-full overflow-hidden aspect-[4/5] bg-gray-200">
+          <img src="https://images.unsplash.com/photo-1581299894007-aaa50297cf16?auto=format&fit=crop&q=80&w=400" alt="Chef" class="w-full h-full object-cover" />
+        </div>
+      </div>
+  
+      <div class="bg-[#FDF6E3] text-[#1B2B1D] p-5 sm:p-6 rounded-[2.5rem] rotate-0 sm:rotate-2 hover:rotate-0 transition-all duration-300 shadow-xl sm:mt-8 lg:mt-4">
+        <div class="flex justify-between items-start mb-6">
+          <div>
+            <h3 class="text-xl font-bold leading-tight">Frances<br>Watson</h3>
+            <p class="text-xs font-sans mt-1 opacity-70">Executive chef</p>
+          </div>
+          <div class="border border-[#1B2B1D]/30 rounded-full p-2">
+            <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14 5l7 7m0 0l-7 7m7-7H3"></path></svg>
+          </div>
+        </div>
+        <div class="rounded-t-full overflow-hidden aspect-[4/5] bg-gray-200">
+          <img src="https://images.unsplash.com/photo-1577219491135-ce391730fb2c?auto=format&fit=crop&q=80&w=400" alt="Chef" class="w-full h-full object-cover" />
+        </div>
+      </div>
+  
+      <div class="bg-[#FDF6E3] text-[#1B2B1D] p-5 sm:p-6 rounded-[2.5rem] rotate-0 sm:-rotate-1 hover:rotate-0 transition-all duration-300 shadow-xl">
+        <div class="flex justify-between items-start mb-6">
+          <div>
+            <h3 class="text-xl font-bold leading-tight">John Carter</h3>
+            <p class="text-xs font-sans mt-1 opacity-70">Reservation manager</p>
+          </div>
+          <div class="border border-[#1B2B1D]/30 rounded-full p-2">
+            <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14 5l7 7m0 0l-7 7m7-7H3"></path></svg>
+          </div>
+        </div>
+        <div class="rounded-t-full overflow-hidden aspect-[4/5] bg-gray-200">
+          <img src="https://images.unsplash.com/photo-1595273670150-db0a3d39074f?auto=format&fit=crop&q=80&w=400" alt="Manager" class="w-full h-full object-cover" />
+        </div>
+      </div>
+  
+      <div class="bg-[#FDF6E3] text-[#1B2B1D] p-5 sm:p-6 rounded-[2.5rem] rotate-0 sm:rotate-3 hover:rotate-0 transition-all duration-300 shadow-xl sm:mt-8 lg:mt-4">
+        <div class="flex justify-between items-start mb-6">
+          <div>
+            <h3 class="text-xl font-bold leading-tight">Kate D'souza</h3>
+            <p class="text-xs font-sans mt-1 opacity-70">Executive chef</p>
+          </div>
+          <div class="border border-[#1B2B1D]/30 rounded-full p-2">
+            <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14 5l7 7m0 0l-7 7m7-7H3"></path></svg>
+          </div>
+        </div>
+        <div class="rounded-t-full overflow-hidden aspect-[4/5] bg-gray-200">
+          <img src="https://images.unsplash.com/photo-1590603740183-980e7f6920eb?auto=format&fit=crop&q=80&w=400" alt="Chef" class="w-full h-full object-cover" />
+        </div>
+      </div>
+  
+    </div>
+  </div>
+
+<!-- sec 5 end -->
+
+<!-- testimonial apge -->
+<div class="bg-[#FFF4DE] font-taviraj min-h-screen flex items-center">
+    <section class="max-w-7xl mx-auto px-6 py-20 overflow-hidden w-full" 
+             x-data="{ 
+                activeTab: 0,
+                testimonials: [
+                    {
+                        name: 'John Carter',
+                        quote: 'Amazing food, impeccable service, and a fantastic atmosphere! The ingredients were fresh, and the dishes had exciting blend of traditional and modern flavors. The restaurant’s decor added to experience, creating a chic yet comfortable space.',
+                        image1: 'https://images.unsplash.com/photo-1579871494447-9811cf80d66c?auto=format&fit=crop&q=80&w=800',
+                        image2: 'https://images.unsplash.com/photo-1559339352-11d035aa65de?auto=format&fit=crop&q=80&w=800'
+                    },
+                    {
+                        name: 'Frances Watson',
+                        quote: 'The farm-to-table experience here is unmatched. Every bite of the seasonal menu tells a story of quality and passion. We particularly enjoyed the chef\'s tasting menu which was a journey through local flavors.',
+                        image1: 'https://images.unsplash.com/photo-1550966841-3ee205297151?auto=format&fit=crop&q=80&w=800',
+                        image2: 'https://images.unsplash.com/photo-1551218808-94e220e084d2?auto=format&fit=crop&q=80&w=800'
+                    }
+                ],
+                next() { this.activeTab = (this.activeTab + 1) % this.testimonials.length },
+                prev() { this.activeTab = (this.activeTab - 1 + this.testimonials.length) % this.testimonials.length }
+             }">
+
+        <div class="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
+            
+            <div class="space-y-8 order-2 lg:order-1">
+                <h2 class="text-5xl md:text-6xl font-[myfont] font-bold text-[#1B2D1F] leading-tight">
+                    What our restaurant <br> patrons say
+                </h2>
+
+                <div class="relative min-h-[300px] md:min-h-[250px]">
+                    <template x-for="(t, index) in testimonials" :key="index">
+                        <div x-show="activeTab === index" 
+                             class="absolute inset-0 space-y-6"
+                             x-transition:enter="transition ease-out duration-500"
+                             x-transition:enter-start="opacity-0 translate-x-12"
+                             x-transition:enter-end="opacity-100 translate-x-0"
+                             x-transition:leave="transition ease-in duration-300"
+                             x-transition:leave-start="opacity-100 translate-x-0"
+                             x-transition:leave-end="opacity-0 -translate-x-12">
+                            
+                            <div class="flex gap-4">
+                                <div class="bg-[#1B2D1F] p-3 rounded-lg h-fit shrink-0">
+                                    <svg class="w-6 h-6 text-[#FFD99F]" fill="currentColor" viewBox="0 0 24 24">
+                                        <path d="M14.017 21L14.017 18C14.017 16.899 14.899 16 16.017 16H19.017C19.569 16 20.017 15.552 20.017 15V9C20.017 8.448 19.569 8 19.017 8H16.017C14.899 8 14.017 7.101 14.017 6V3L22.017 3V15C22.017 18.314 19.331 21 16.017 21H14.017ZM3.017 21L3.017 18C3.017 16.899 3.899 16 5.017 16H8.017C8.569 16 9.017 15.552 9.017 15V9C9.017 8.448 8.569 8 8.017 8H5.017C3.899 8 3.017 7.101 3.017 6V3L11.017 3V15C11.017 18.314 8.331 21 5.017 21H3.017Z" />
+                                    </svg>
+                                </div>
+                                <p class="text-xl text-[#1B2D1F]/80 leading-relaxed italic" x-text="t.quote"></p>
+                            </div>
+
+                            <h4 class="text-2xl font-bold text-[#1B2D1F]" x-text="t.name"></h4>
+                        </div>
+                    </template>
+                </div>
+
+                <div class="flex gap-4 pt-4">
+                    <button @click="prev()" class="w-12 h-12 rounded-full border border-[#1B2D1F] flex items-center justify-center hover:bg-[#1B2D1F] hover:text-[#FFD99F] transition-all cursor-pointer group">
+                        <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M15 19l-7-7 7-7" /></svg>
+                    </button>
+                    <button @click="next()" class="w-12 h-12 rounded-full border border-[#1B2D1F] flex items-center justify-center hover:bg-[#1B2D1F] hover:text-[#FFD99F] transition-all cursor-pointer group">
+                        <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M9 5l7 7-7 7" /></svg>
+                    </button>
+                </div>
+            </div>
+
+            <div class="relative order-1 lg:order-2 h-[400px] md:h-[500px] flex items-center justify-center">
+                <template x-for="(t, index) in testimonials" :key="index">
+                    <div x-show="activeTab === index" 
+                         class="absolute inset-0"
+                         x-transition:enter="transition ease-out duration-700"
+                         x-transition:enter-start="opacity-0 scale-95 rotate-3"
+                         x-transition:enter-end="opacity-100 scale-100 rotate-0"
+                         x-transition:leave="transition ease-in duration-300"
+                         x-transition:leave-start="opacity-100 scale-100"
+                         x-transition:leave-end="opacity-0 scale-90">
+                        
+                        <div class="absolute top-0 right-0 w-3/4 aspect-video rounded-3xl overflow-hidden shadow-2xl z-10 rotate-[-4deg]">
+                            <img :src="t.image1" class="w-full h-full object-cover" alt="Sushi">
+                        </div>
+                        
+                        <div class="absolute bottom-4 left-4 w-1/2 aspect-[4/5] rounded-3xl overflow-hidden shadow-2xl z-20 rotate-[6deg] border-8 border-[#FFF4DE]">
+                            <img :src="t.image2" class="w-full h-full object-cover" alt="Chef">
+                        </div>
+
+                        <p class="absolute bottom-20 right-4 md:right-10 font-cursive text-3xl md:text-4xl text-[#1B2D1F] z-30 leading-tight">
+                            It was a memorable <br> experience.
+                        </p>
+                    </div>
+                </template>
+            </div>
+
+        </div>
+    </section>
+</div>
+
+<!-- testimonials end -->
+
+
+
+
+<!-- footer -->
+
+<footer class="bg-[#FFF4DE] font-serif text-[#001524] py-16 px-6 sm:px-12 lg:px-24 border-t border-[#001524]/10">
+  <div class="max-w-7xl mx-auto">
+      
+      <div class="flex flex-col lg:flex-row justify-between items-start lg:items-center gap-10 mb-16">
+          <div class="max-w-xl">
+              <span class="italic text-2xl font-[myfont] font-bold block mb-2">It was a memorable</span>
+              <h2 class="text-4xl md:text-5xl lg:text-6xl leading-tight font-medium">
+                  From farm to table excellence in every bite
+              </h2>
+          </div>
+          
+          <div class="w-full lg:w-auto min-w-[320px] md:min-w-[450px] flex items-center border border-[#001524] rounded-full px-6 py-4 focus-within:ring-1 focus-within:ring-[#001524]">
+              <input type="email" placeholder="Email address" class="bg-transparent flex-grow outline-none text-sm placeholder-[#001524]/50" />
+              <button class="text-sm font-bold uppercase tracking-wider ml-4 whitespace-nowrap">Subscribe now</button>
+          </div>
+      </div>
+
+      <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-12 text-sm lg:text-base mb-16">
+          
+          <div class="space-y-6 font-semibold font-['Taviraj']">
+              <h3 class="font-bold text-lg">Address</h3>
+              <p class="leading-loose ">
+                  500 Terry Francine street, TD<br>san Francisco, CA 94158
+              </p>
+              <p class="leading-loose ">
+                  Le Bistrovia 27 Rue de<br>innovation 75004 Paris, France
+              </p>
+          </div>
+
+          <div class="space-y-6">
+              <h3 class="font-bold text-lg">Bistrovia opening hours</h3>
+              <ul class="space-y-3 opacity-80">
+                  <li class="flex justify-between"><span>Breakfast:</span> <span>10.00AM – 11:00AM</span></li>
+                  <li class="flex justify-between"><span>Lunch:</span> <span>12.00PM – 02:00PM</span></li>
+                  <li class="flex justify-between"><span>Dinner:</span> <span>08.00AM – 11:00PM</span></li>
+              </ul>
+          </div>
+
+          <div class="space-y-6">
+              <h3 class="font-bold text-lg">Let's connect</h3>
+              <ul class="space-y-3 font-sans ">
+                  <li>+ (643) 461-630 866</li>
+                  <li>+ (112) 123 456 789</li>
+                  <li class="pt-4"><a href="mailto:restaurants@mail.com" class="underline decoration-1 underline-offset-4">restaurants@mail.com</a></li>
+              </ul>
+          </div>
+
+          <div class="space-y-6">
+              <h3 class="font-bold text-lg">Book a table</h3>
+              <p class="opacity-80">Make your reservation for an unforgettable meal!</p>
+              <button class="flex items-center gap-3 bg-[#001524] text-white px-8 py-4 rounded-full hover:bg-opacity-90 transition-all">
+                  <span>Reservation</span>
+                  <svg xmlns="http://www.w3.org/2000/svg" class="h-4 w-4" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                      <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14 5l7 7m0 0l-7 7m7-7H3" />
+                  </svg>
+              </button>
+          </div>
+      </div>
+
+      <div id="custom-text-area" class="border-t border-[#001524]/10 pt-8 mt-8">
+          </div>
+      
+  </div>
+</footer>
+
+<!-- footer end -->
+
+
+</div>
+</div>
+</div>
+<script src="https://cdn.tailwindcss.com"></script>
+<script src="script.js"></script>
+<script>
+  tailwind.config = {
+    theme: {
+      extend: {
+        keyframes: {
+          fadeInUp: {
+            '0%': { opacity: '0', transform: 'translateY(50px)' },
+            '100%': { opacity: '1', transform: 'translateY(0)' },
+          },
+          fadeIn: {
+            '0%': { opacity: '0' },
+            '100%': { opacity: '1' },
+          }
+        }
+      }
+    }
+  }
+</script>
+</body>
+</html>

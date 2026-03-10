@@ -1,0 +1,312 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+    <script src="https://cdn.jsdelivr.net/npm/alpinejs@3.x.x/dist/cdn.min.js" defer></script>
+    <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@1,400&family=Great+Vibes&display=swap" rel="stylesheet">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Taviraj:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
+ <link rel="stylesheet" href="style.css">
+</head>
+<style>
+    .cursor-pointer{
+        color: black;
+    }
+</style>
+<body>
+    <div class="main-con">
+<div>
+    <div class="no1 bg-[#FFF4DE] flex gap-10 h-fit flex-col relative">
+
+        <div class="bg-[#FFF4DE] min-h-screen">
+            <nav class="relative z-50 transition-all duration-1000 ease-out">
+                <div class="h-[10vh] flex justify-center items-end relative">
+                    <!-- <div class="absolute h-[1px] w-[91.99%] bg-[black] opacity-30"></div> -->
+                    <div class="absolute h-[1px] w-[93.5%] bg-[black]"></div>
+                </div>
+            
+                <div class="relative h-[9vh] flex justify-center">
+                    <div class="w-[94%] items-center flex justify-between leading-[30px] text-[18px] text-white">
+                        
+                        <div class="hidden md:flex items-center gap-10 w-[50%]">
+                            <a href="./index.html" class="cursor-pointer hover:text-[#FFD99F] transition-colors duration-300 relative group">
+                                Home
+                                <span class="absolute -bottom-1 left-0 w-0 h-0.5 bg-[#FFD99F] transition-all duration-300 group-hover:w-full"></span>
+                            </a>
+                            <a href="./about.html" class="cursor-pointer hover:text-[#FFD99F] transition-colors duration-300 relative group">
+                                About
+                                <span class="absolute -bottom-1 left-0 w-0 h-0.5 bg-[#FFD99F] transition-all duration-300 group-hover:w-full"></span>
+                            </a>
+                            <a href="./menu.html" class="cursor-pointer hover:text-[#FFD99F] transition-colors duration-300 relative group">
+                                Menu
+                                <span class="absolute -bottom-1 left-0 w-0 h-0.5 bg-[#FFD99F] transition-all duration-300 group-hover:w-full"></span>
+                            </a>
+                            <a href="./contact.html" class="cursor-pointer hover:text-[#FFD99F] transition-colors duration-300 relative group">
+                                Contact
+                                <span class="absolute -bottom-1 left-0 w-0 h-0.5 bg-[#FFD99F] transition-all duration-300 group-hover:w-full"></span>
+                            </a>
+                        </div>
+            
+                        <div class="md:hidden font-serif text-[#FFD99F] text-xl font-bold">
+                            Caravan
+                        </div>
+            
+                        <div class="flex items-center gap-6">
+                            <button class="hidden sm:block px-6 py-2 rounded-full border border-[black] text-[black] hover:bg-[#FFD99F] hover:text-[#1B2D1F] transition-all duration-500 transform hover:scale-105 active:scale-95 whitespace-nowrap">
+                                Reserve table
+                            </button>
+            
+                            <button onclick="toggleMenu()" class="md:hidden flex flex-col gap-1.5 z-[100] relative p-2">
+                                <span id="line1" class="w-8 h-0.5 bg-[#FFD99F] transition-all duration-300 origin-center"></span>
+                                <span id="line2" class="w-8 h-0.5 bg-[#FFD99F] transition-all duration-300"></span>
+                                <span id="line3" class="w-8 h-0.5 bg-[#FFD99F] transition-all duration-300 origin-center"></span>
+                            </button>
+                        </div>
+                    </div>
+                </div>
+            
+                <div id="mobileMenu" class="fixed text-[#ffff] inset-0 bg-[#1B2D1F] z-[90] flex flex-col items-center justify-center gap-8 text-2xl font-serif translate-x-full transition-transform duration-500 ease-in-out">
+                    <a href="./index.html" class="mobile-link opacity-0 hover:text-[#FFD99F] transition-all">Home</a>
+                    <a href="./about.html" class="mobile-link opacity-0 hover:text-[#FFD99F] transition-all">About</a>
+                    <a href="./menu.html" class="mobile-link opacity-0 hover:text-[#FFD99F] transition-all">Menu</a>
+                    <a href="./contact.html" class="mobile-link opacity-0 hover:text-[#FFD99F] transition-all">Contact</a>
+                    <button class="mt-4 px-8 py-3 rounded-full border border-[#FFD99F] text-[#FFD99F] mobile-link opacity-0">
+                        Reserve table
+                    </button>
+                </div>
+            </nav>
+          
+            <div class="flex justify-center items-center py-6 md:py-12">
+              <h1 class="text-[12vw] font-[myfont] md:text-[8vw] uppercase text-[#001528] mb-2 font-light tracking-tight text-center leading-[1]">
+                Contact us
+              </h1>
+            </div>
+          
+            <div class="flex w-full justify-center pb-20">
+              <div class="relative overflow-hidden w-[94%] h-[40vh] md:h-[60vh] lg:h-[70vh] rounded-[3vw] md:rounded-[2vw] bg-[#000]">
+                <video 
+                  class="absolute inset-0 w-full h-full object-cover" 
+                  autoplay 
+                  muted 
+                  src="https://cdn.prod.website-files.com/66c9bf3cbad8964a2609b4e6%2F66f39427c62648c332116286_video-bg-3-transcode.mp4" 
+                  loop 
+                  playsinline>
+                </video>
+              </div>
+            </div>
+          </div>
+          
+          <script>
+            let isOpen = false;
+            function toggleMenu() {
+              const menu = document.getElementById('mobileMenu');
+              const line1 = document.getElementById('line1');
+              const line2 = document.getElementById('line2');
+              const line3 = document.getElementById('line3');
+              
+              isOpen = !isOpen;
+              
+              if (isOpen) {
+                // Open Menu
+                menu.classList.remove('translate-x-full');
+                // Animate Hamburger (X shape)
+                line1.style.transform = 'translateY(8px) rotate(45deg)';
+                line1.style.backgroundColor = '#FFF4DE';
+                line2.style.opacity = '0';
+                line3.style.transform = 'translateY(-8px) rotate(-45deg)';
+                line3.style.backgroundColor = '#FFF4DE';
+              } else {
+                // Close Menu
+                menu.classList.add('translate-x-full');
+                // Reset Hamburger
+                line1.style.transform = 'translateY(0) rotate(0)';
+                line1.style.backgroundColor = '#001528';
+                line2.style.opacity = '1';
+                line3.style.transform = 'translateY(0) rotate(0)';
+                line3.style.backgroundColor = '#001528';
+              }
+            }
+          </script>
+</div>
+
+</div>
+<!-- sec 2 -->
+
+<div class="no2 min-h-screen w-full flex bg-[#FFF4DE] justify-center items-center py-12 px-4">
+    <div class="consec flex flex-col lg:flex-row justify-between items-center w-full max-w-6xl gap-10">
+      
+      <div class="w-full lg:w-1/2 flex justify-center lg:justify-start">
+        <div class="w-full max-w-sm p-4 md:p-8 rounded-sm font-serif text-[#1A2E35]">
+          
+          <section class="mb-8">
+            <h2 class="text-xl md:text-2xl font-bold mb-3">
+              Caravan time <br class="block sm:hidden"> 
+              <span class="text-sm font-normal">(Breakfast, lunch, Dinner)</span>
+            </h2>
+            <p class="text-lg leading-relaxed">Monday to Sunday</p>
+            <p class="text-lg leading-relaxed">10.30am – 3:00pm</p>
+          </section>
+      
+          <section class="mb-8">
+            <h3 class="text-xl md:text-2xl font-bold mb-3">Book a table</h3>
+            <p class="text-lg leading-relaxed">T. +12 344 057899</p>
+            <p class="text-lg leading-relaxed">M. restaurant@example.com</p>
+          </section>
+      
+          <section>
+            <h3 class="text-xl md:text-2xl font-bold mb-3">Restaurant address</h3>
+            <p class="text-lg leading-relaxed">Long Hills Dr 351,</p>
+            <p class="text-lg leading-relaxed">New York 07078, United States</p>
+          </section>
+      
+        </div>
+      </div>
+  
+      <div class="w-full lg:w-1/2 h-[300px] md:h-[450px]">
+        <iframe 
+          src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d193595.15830869428!2d-74.119763973046!3d40.69766374874431!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x89c24fa5d33f083b%3A0xc80b8f06e177fe62!2sNew%20York%2C%20NY%2C%20USA!5e0!3m2!1sen!2s!4v1650000000000!5m2!1sen!2s" 
+          class="w-full h-full rounded-lg shadow-md border-0" 
+          allowfullscreen="" 
+          loading="lazy" 
+          referrerpolicy="no-referrer-when-downgrade">
+        </iframe>
+      </div>
+  
+    </div>
+  </div>
+
+
+<!-- gallery -->
+<div class="bg-[#1B2D1F] py-16 px-4">
+    <div class="max-w-7xl mx-auto">
+      
+      <h2 class="text-4xl md:text-5xl font-[taviraj] text-[#FFF4DE] text-center mb-12 tracking-wide">
+        Follow Us
+      </h2>
+  
+      <div class="grid grid-cols-1 sm:grid-cols-3 lg:grid-cols-6 gap-12">
+        
+        <div class="overflow-hidden group cursor-pointer aspect-square">
+          <img src="https://images.unsplash.com/photo-1578985545062-69928b1d9587" 
+               alt="Cake" 
+               class="w-full h-full object-cover transition-all duration-500 group-hover:scale-110 group-hover:brightness-110">
+        </div>
+  
+        <div class="overflow-hidden group cursor-pointer aspect-square">
+          <img src="https://images.unsplash.com/photo-1555244162-803834f70033" 
+               alt="Buffet" 
+               class="w-full h-full object-cover transition-all duration-500 group-hover:scale-110 group-hover:brightness-110">
+        </div>
+  
+        <div class="overflow-hidden group cursor-pointer aspect-square">
+          <img src="https://images.unsplash.com/photo-1544148103-0773bf10d330" 
+               alt="Table Setting" 
+               class="w-full h-full object-cover transition-all duration-500 group-hover:scale-110 group-hover:brightness-110">
+        </div>
+  
+        <div class="overflow-hidden group cursor-pointer aspect-square">
+          <img src="https://images.unsplash.com/photo-1571115177098-24ec42ed204d" 
+               alt="Dessert" 
+               class="w-full h-full object-cover transition-all duration-500 group-hover:scale-110 group-hover:brightness-110">
+        </div>
+  
+        <div class="overflow-hidden group cursor-pointer aspect-square">
+          <img src="https://images.unsplash.com/photo-1512621776951-a57141f2eefd" 
+               alt="Main Dish" 
+               class="w-full h-full object-cover transition-all duration-500 group-hover:scale-110 group-hover:brightness-110">
+        </div>
+  
+        <div class="overflow-hidden group cursor-pointer aspect-square">
+          <img src="https://images.unsplash.com/photo-1571115177098-24ec42ed204d" 
+               alt="Drink" 
+               class="w-full h-full object-cover transition-all duration-500 group-hover:scale-110 group-hover:brightness-110">
+        </div>
+  
+      </div>
+    </div>
+  </div>
+<!-- gallery end -->
+
+
+<!-- footer -->
+
+<footer class="bg-[#FFF4DE] font-serif text-[#001524] py-16 px-6 sm:px-12 lg:px-24 border-t border-[#001524]/10">
+    <div class="max-w-7xl mx-auto">
+        
+        <div class="flex flex-col lg:flex-row justify-between items-start lg:items-center gap-10 mb-16">
+            <div class="max-w-xl">
+                <span class="italic text-2xl font-[myfont] font-bold block mb-2">It was a memorable</span>
+                <h2 class="text-4xl md:text-5xl lg:text-6xl leading-tight font-medium">
+                    From farm to table excellence in every bite
+                </h2>
+            </div>
+            
+            <div class="w-full lg:w-auto min-w-[320px] md:min-w-[450px] flex items-center border border-[#001524] rounded-full px-6 py-4 focus-within:ring-1 focus-within:ring-[#001524]">
+                <input type="email" placeholder="Email address" class="bg-transparent flex-grow outline-none text-sm placeholder-[#001524]/50" />
+                <button class="text-sm font-bold uppercase tracking-wider ml-4 whitespace-nowrap">Subscribe now</button>
+            </div>
+        </div>
+  
+        <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-12 text-sm lg:text-base mb-16">
+            
+            <div class="space-y-6 font-semibold font-['Taviraj']">
+                <h3 class="font-bold text-lg">Address</h3>
+                <p class="leading-loose ">
+                    500 Terry Francine street, TD<br>san Francisco, CA 94158
+                </p>
+                <p class="leading-loose ">
+                    Le Bistrovia 27 Rue de<br>innovation 75004 Paris, France
+                </p>
+            </div>
+  
+            <div class="space-y-6">
+                <h3 class="font-bold text-lg">Bistrovia opening hours</h3>
+                <ul class="space-y-3 opacity-80">
+                    <li class="flex justify-between"><span>Breakfast:</span> <span>10.00AM – 11:00AM</span></li>
+                    <li class="flex justify-between"><span>Lunch:</span> <span>12.00PM – 02:00PM</span></li>
+                    <li class="flex justify-between"><span>Dinner:</span> <span>08.00AM – 11:00PM</span></li>
+                </ul>
+            </div>
+  
+            <div class="space-y-6">
+                <h3 class="font-bold text-lg">Let's connect</h3>
+                <ul class="space-y-3 font-sans ">
+                    <li>+ (643) 461-630 866</li>
+                    <li>+ (112) 123 456 789</li>
+                    <li class="pt-4"><a href="mailto:restaurants@mail.com" class="underline decoration-1 underline-offset-4">restaurants@mail.com</a></li>
+                </ul>
+            </div>
+  
+            <div class="space-y-6">
+                <h3 class="font-bold text-lg">Book a table</h3>
+                <p class="opacity-80">Make your reservation for an unforgettable meal!</p>
+                <button class="flex items-center gap-3 bg-[#001524] text-white px-8 py-4 rounded-full hover:bg-opacity-90 transition-all">
+                    <span>Reservation</span>
+                    <svg xmlns="http://www.w3.org/2000/svg" class="h-4 w-4" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14 5l7 7m0 0l-7 7m7-7H3" />
+                    </svg>
+                </button>
+            </div>
+        </div>
+  
+        <div id="custom-text-area" class="border-t border-[#001524]/10 pt-8 mt-8">
+            </div>
+        
+    </div>
+  </footer>
+  
+  <!-- footer end -->
+  
+  
+
+
+
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>
