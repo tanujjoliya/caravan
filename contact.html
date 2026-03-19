@@ -24,62 +24,62 @@
     <div class="no1 bg-[#FFF4DE] flex gap-10 h-fit flex-col relative">
 
         <div class="bg-[#FFF4DE] min-h-screen">
-            <nav class="relative z-50 transition-all duration-1000 ease-out">
-                <div class="h-[10vh] flex justify-center items-end relative">
-                    <!-- <div class="absolute h-[1px] w-[91.99%] bg-[black] opacity-30"></div> -->
-                    <div class="absolute h-[1px] w-[93.5%] bg-[black]"></div>
-                </div>
-            
-                <div class="relative h-[9vh] flex justify-center">
-                    <div class="w-[94%] items-center flex justify-between leading-[30px] text-[18px] text-white">
-                        
-                        <div class="hidden md:flex items-center gap-10 w-[50%]">
-                            <a href="./index.html" class="cursor-pointer hover:text-[#FFD99F] transition-colors duration-300 relative group">
-                                Home
-                                <span class="absolute -bottom-1 left-0 w-0 h-0.5 bg-[#FFD99F] transition-all duration-300 group-hover:w-full"></span>
-                            </a>
-                            <a href="./about.html" class="cursor-pointer hover:text-[#FFD99F] transition-colors duration-300 relative group">
-                                About
-                                <span class="absolute -bottom-1 left-0 w-0 h-0.5 bg-[#FFD99F] transition-all duration-300 group-hover:w-full"></span>
-                            </a>
-                            <a href="./menu.html" class="cursor-pointer hover:text-[#FFD99F] transition-colors duration-300 relative group">
-                                Menu
-                                <span class="absolute -bottom-1 left-0 w-0 h-0.5 bg-[#FFD99F] transition-all duration-300 group-hover:w-full"></span>
-                            </a>
-                            <a href="./contact.html" class="cursor-pointer hover:text-[#FFD99F] transition-colors duration-300 relative group">
-                                Contact
-                                <span class="absolute -bottom-1 left-0 w-0 h-0.5 bg-[#FFD99F] transition-all duration-300 group-hover:w-full"></span>
-                            </a>
-                        </div>
-            
-                        <div class="md:hidden font-serif text-[#FFD99F] text-xl font-bold">
-                            Caravan
-                        </div>
-            
-                        <div class="flex items-center gap-6">
-                            <button class="hidden sm:block px-6 py-2 rounded-full border border-[black] text-[black] hover:bg-[#FFD99F] hover:text-[#1B2D1F] transition-all duration-500 transform hover:scale-105 active:scale-95 whitespace-nowrap">
-                                Reserve table
-                            </button>
-            
-                            <button onclick="toggleMenu()" class="md:hidden flex flex-col gap-1.5 z-[100] relative p-2">
-                                <span id="line1" class="w-8 h-0.5 bg-[#FFD99F] transition-all duration-300 origin-center"></span>
-                                <span id="line2" class="w-8 h-0.5 bg-[#FFD99F] transition-all duration-300"></span>
-                                <span id="line3" class="w-8 h-0.5 bg-[#FFD99F] transition-all duration-300 origin-center"></span>
-                            </button>
-                        </div>
+          <nav class="relative text-white z-50 transition-all duration-1000 ease-out">
+            <div class="h-[10vh] flex justify-center items-end relative">
+                <div class="absolute h-[1px] w-[91.99%] bg-[#FFD99F] opacity-30"></div>
+                <div class="absolute h-[1px] w-[93.5%] bg-[#FFD99F]"></div>
+            </div>
+        
+            <div class="relative h-[9vh] flex justify-center">
+                <div class="w-[94%] items-center flex justify-between leading-[30px] text-[18px] text-white">
+                    
+                    <div class="hidden md:flex items-center gap-10 w-[50%]">
+                        <a href="./index.html" class="cursor-pointer hover:text-[#FFD99F] transition-colors duration-300 relative group">
+                            Home
+                            <span class="absolute -bottom-1 left-0 w-0 h-0.5 bg-[#FFD99F] transition-all duration-300 group-hover:w-full"></span>
+                        </a>
+                        <a href="./about.html" class="cursor-pointer hover:text-[#FFD99F] transition-colors duration-300 relative group">
+                            About
+                            <span class="absolute -bottom-1 left-0 w-0 h-0.5 bg-[#FFD99F] transition-all duration-300 group-hover:w-full"></span>
+                        </a>
+                        <a href="./menu.html" class="cursor-pointer hover:text-[#FFD99F] transition-colors duration-300 relative group">
+                            Menu
+                            <span class="absolute -bottom-1 left-0 w-0 h-0.5 bg-[#FFD99F] transition-all duration-300 group-hover:w-full"></span>
+                        </a>
+                        <a href="./contact.html" class="cursor-pointer hover:text-[#FFD99F] transition-colors duration-300 relative group">
+                            Contact
+                            <span class="absolute -bottom-1 left-0 w-0 h-0.5 bg-[#FFD99F] transition-all duration-300 group-hover:w-full"></span>
+                        </a>
+                    </div>
+        
+                    <div class="md:hidden font-serif text-[#FFD99F] text-xl font-bold">
+                        <!-- Caravan -->
+                    </div>
+        
+                    <div class="flex items-center gap-6">
+                        <button class="hidden sm:block px-6 py-2 rounded-full border border-[#FFD99F] text-[#FFD99F] hover:bg-[#FFD99F] hover:text-[#1B2D1F] transition-all duration-500 transform hover:scale-105 active:scale-95 whitespace-nowrap">
+                            <a href="./menu.html">Menu</a>
+                        </button>
+        
+                        <button onclick="toggleMenu()" class="md:hidden flex flex-col gap-1.5 z-[100] relative p-2">
+                            <span id="line1" class="w-8 h-0.5 bg-[#FFD99F] transition-all duration-300 origin-center"></span>
+                            <span id="line2" class="w-8 h-0.5 bg-[#FFD99F] transition-all duration-300"></span>
+                            <span id="line3" class="w-8 h-0.5 bg-[#FFD99F] transition-all duration-300 origin-center"></span>
+                        </button>
                     </div>
                 </div>
-            
-                <div id="mobileMenu" class="fixed text-[#ffff] inset-0 bg-[#1B2D1F] z-[90] flex flex-col items-center justify-center gap-8 text-2xl font-serif translate-x-full transition-transform duration-500 ease-in-out">
-                    <a href="./index.html" class="mobile-link opacity-0 hover:text-[#FFD99F] transition-all">Home</a>
-                    <a href="./about.html" class="mobile-link opacity-0 hover:text-[#FFD99F] transition-all">About</a>
-                    <a href="./menu.html" class="mobile-link opacity-0 hover:text-[#FFD99F] transition-all">Menu</a>
-                    <a href="./contact.html" class="mobile-link opacity-0 hover:text-[#FFD99F] transition-all">Contact</a>
-                    <button class="mt-4 px-8 py-3 rounded-full border border-[#FFD99F] text-[#FFD99F] mobile-link opacity-0">
-                        Reserve table
-                    </button>
-                </div>
-            </nav>
+            </div>
+        
+            <div id="mobileMenu" class="fixed inset-0 bg-[#1B2D1F] z-[90] flex flex-col items-center justify-center gap-8 text-2xl font-serif translate-x-full transition-transform duration-500 ease-in-out">
+                <a href="./index.html" class="mobile-link opacity-0 hover:text-[#FFD99F] transition-all">Home</a>
+                <a href="./about.html" class="mobile-link opacity-0 hover:text-[#FFD99F] transition-all">About</a>
+                <a href="./menu.html" class="mobile-link opacity-0 hover:text-[#FFD99F] transition-all">Menu</a>
+                <a href="./contact.html" class="mobile-link opacity-0 hover:text-[#FFD99F] transition-all">Contact</a>
+                <button class="mt-4 px-8 py-3 rounded-full border border-[#FFD99F] text-[#FFD99F] mobile-link opacity-0">
+                    <a href="./menu.html">Menu</a>
+                </button>
+            </div>
+        </nav>
           
             <div class="flex justify-center items-center py-6 md:py-12">
               <h1 class="text-[12vw] font-[myfont] md:text-[8vw] uppercase text-[#001528] mb-2 font-light tracking-tight text-center leading-[1]">

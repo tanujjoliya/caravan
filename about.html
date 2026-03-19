@@ -31,7 +31,7 @@
               .delay-300 { animation-delay: 0.6s; }
             </style>
             
-            <nav class="relative z-50 transition-all duration-1000 ease-out">
+            <nav class="relative text-white z-50 transition-all duration-1000 ease-out">
               <div class="h-[10vh] flex justify-center items-end relative">
                   <div class="absolute h-[1px] w-[91.99%] bg-[#FFD99F] opacity-30"></div>
                   <div class="absolute h-[1px] w-[93.5%] bg-[#FFD99F]"></div>
@@ -60,12 +60,12 @@
                       </div>
           
                       <div class="md:hidden font-serif text-[#FFD99F] text-xl font-bold">
-                          BISTROVIA
+                          <!-- Caravan -->
                       </div>
           
                       <div class="flex items-center gap-6">
                           <button class="hidden sm:block px-6 py-2 rounded-full border border-[#FFD99F] text-[#FFD99F] hover:bg-[#FFD99F] hover:text-[#1B2D1F] transition-all duration-500 transform hover:scale-105 active:scale-95 whitespace-nowrap">
-                              Reserve table
+                              <a href="./menu.html">Menu</a>
                           </button>
           
                           <button onclick="toggleMenu()" class="md:hidden flex flex-col gap-1.5 z-[100] relative p-2">
@@ -77,13 +77,13 @@
                   </div>
               </div>
           
-              <div id="mobileMenu" class="fixed text-[#ffff] inset-0 bg-[#1B2D1F] z-[90] flex flex-col items-center justify-center gap-8 text-2xl font-serif translate-x-full transition-transform duration-500 ease-in-out">
+              <div id="mobileMenu" class="fixed inset-0 bg-[#1B2D1F] z-[90] flex flex-col items-center justify-center gap-8 text-2xl font-serif translate-x-full transition-transform duration-500 ease-in-out">
                   <a href="./index.html" class="mobile-link opacity-0 hover:text-[#FFD99F] transition-all">Home</a>
                   <a href="./about.html" class="mobile-link opacity-0 hover:text-[#FFD99F] transition-all">About</a>
                   <a href="./menu.html" class="mobile-link opacity-0 hover:text-[#FFD99F] transition-all">Menu</a>
                   <a href="./contact.html" class="mobile-link opacity-0 hover:text-[#FFD99F] transition-all">Contact</a>
                   <button class="mt-4 px-8 py-3 rounded-full border border-[#FFD99F] text-[#FFD99F] mobile-link opacity-0">
-                      Reserve table
+                      <a href="./menu.html">Menu</a>
                   </button>
               </div>
           </nav>
