@@ -18,62 +18,70 @@
         <!-- header -->
         <div class="bg-[#001528] flex gap-10 flex-col relative">
         
-          <nav class="relative z-50 transition-all duration-1000 ease-out">
+          <nav class="relative z-50 text-white transition-all duration-1000 ease-out">
             <div class="h-[10vh] flex justify-center items-end relative">
-                <div class="absolute h-[1px] w-[91.99%] bg-[#FFD99F] opacity-30"></div>
-                <div class="absolute h-[1px] w-[93.5%] bg-[#FFD99F]"></div>
+            <div >
+                <h1 class="maintext text-4xl mb-4 uppercase leading-none text-center -[bounce_3s_infinite_alternate] brightness-125">
+                    Caravan Kabob House
+                </h1>
             </div>
-        
-            <div class="relative h-[9vh] flex justify-center">
-                <div class="w-[94%] items-center flex justify-between leading-[30px] text-[18px] text-white">
-                    
-                    <div class="hidden md:flex items-center gap-10 w-[50%]">
-                        <a href="./index.html" class="cursor-pointer hover:text-[#FFD99F] transition-colors duration-300 relative group">
-                            Home
-                            <span class="absolute -bottom-1 left-0 w-0 h-0.5 bg-[#FFD99F] transition-all duration-300 group-hover:w-full"></span>
-                        </a>
-                        <a href="./about.html" class="cursor-pointer hover:text-[#FFD99F] transition-colors duration-300 relative group">
-                            About
-                            <span class="absolute -bottom-1 left-0 w-0 h-0.5 bg-[#FFD99F] transition-all duration-300 group-hover:w-full"></span>
-                        </a>
-                        <a href="./menu.html" class="cursor-pointer hover:text-[#FFD99F] transition-colors duration-300 relative group">
-                            Menu
-                            <span class="absolute -bottom-1 left-0 w-0 h-0.5 bg-[#FFD99F] transition-all duration-300 group-hover:w-full"></span>
-                        </a>
-                        <a href="./contact.html" class="cursor-pointer hover:text-[#FFD99F] transition-colors duration-300 relative group">
-                            Contact
-                            <span class="absolute -bottom-1 left-0 w-0 h-0.5 bg-[#FFD99F] transition-all duration-300 group-hover:w-full"></span>
-                        </a>
-                    </div>
-        
-                    <div class="md:hidden font-serif text-[#FFD99F] text-xl font-bold">
-                        BISTROVIA
-                    </div>
-        
-                    <div class="flex items-center gap-6">
-                        <button class="hidden sm:block px-6 py-2 rounded-full border border-[#FFD99F] text-[#FFD99F] hover:bg-[#FFD99F] hover:text-[#1B2D1F] transition-all duration-500 transform hover:scale-105 active:scale-95 whitespace-nowrap">
-                            Reserve table
-                        </button>
-        
-                        <button onclick="toggleMenu()" class="md:hidden flex flex-col gap-1.5 z-[100] relative p-2">
-                            <span id="line1" class="w-8 h-0.5 bg-[#FFD99F] transition-all duration-300 origin-center"></span>
-                            <span id="line2" class="w-8 h-0.5 bg-[#FFD99F] transition-all duration-300"></span>
-                            <span id="line3" class="w-8 h-0.5 bg-[#FFD99F] transition-all duration-300 origin-center"></span>
-                        </button>
-                    </div>
+            <div class="absolute h-[1px] w-[91.99%] bg-[#FFD99F] opacity-30"></div>
+            <div class="absolute h-[1px] w-[93.5%] bg-[#FFD99F]"></div>
+        </div>
+    
+        <div class="relative h-[9vh] flex justify-center">
+            <div class="w-[94%] items-center flex justify-between leading-[30px] text-[18px] text-white">
+                
+                <div class="hidden md:flex items-center gap-10 w-[50%]">
+                    <a href="./index.html" class="cursor-pointer hover:text-[#FFD99F] transition-colors duration-300 relative group">
+                        Home
+                        <span class="absolute -bottom-1 left-0 w-0 h-0.5 bg-[#FFD99F] transition-all duration-300 group-hover:w-full"></span>
+                    </a>
+                    <a href="./about.html" class="cursor-pointer hover:text-[#FFD99F] transition-colors duration-300 relative group">
+                        About
+                        <span class="absolute -bottom-1 left-0 w-0 h-0.5 bg-[#FFD99F] transition-all duration-300 group-hover:w-full"></span>
+                    </a>
+                    <a href="./menu.html" class="cursor-pointer hover:text-[#FFD99F] transition-colors duration-300 relative group">
+                        Menu
+                        <span class="absolute -bottom-1 left-0 w-0 h-0.5 bg-[#FFD99F] transition-all duration-300 group-hover:w-full"></span>
+                    </a>
+                    <a href="./contact.html" class="cursor-pointer hover:text-[#FFD99F] transition-colors duration-300 relative group">
+                        Contact
+                        <span class="absolute -bottom-1 left-0 w-0 h-0.5 bg-[#FFD99F] transition-all duration-300 group-hover:w-full"></span>
+                    </a>
+                </div>
+    
+                <div class="md:hidden font-serif text-[#FFD99F] text-xl font-bold">
+                    <a href="./index.html">
+
+                        <img src="./public/images/logo.png" width="70px" alt="" >
+                    </a>
+                </div>
+    
+                <div class="flex items-center gap-6">
+                    <button class="hidden sm:block px-6 py-2 rounded-full border border-[#FFD99F] text-[#FFD99F] hover:bg-[#FFD99F] hover:text-[#1B2D1F] transition-all duration-500 transform hover:scale-105 active:scale-95 whitespace-nowrap">
+                        <a href="./menu.html">Menu</a>
+                    </button>
+    
+                    <button onclick="toggleMenu()" class="md:hidden flex flex-col gap-1.5 z-[100] relative p-2">
+                        <span id="line1" class="w-8 h-0.5 bg-[#FFD99F] transition-all duration-300 origin-center"></span>
+                        <span id="line2" class="w-8 h-0.5 bg-[#FFD99F] transition-all duration-300"></span>
+                        <span id="line3" class="w-8 h-0.5 bg-[#FFD99F] transition-all duration-300 origin-center"></span>
+                    </button>
                 </div>
             </div>
-        
-            <div id="mobileMenu" class="fixed text-[#ffff] inset-0 bg-[#1B2D1F] z-[90] flex flex-col items-center justify-center gap-8 text-2xl font-serif translate-x-full transition-transform duration-500 ease-in-out">
-                <a href="./index.html" class="mobile-link opacity-0 hover:text-[#FFD99F] transition-all">Home</a>
-                <a href="./about.html" class="mobile-link opacity-0 hover:text-[#FFD99F] transition-all">About</a>
-                <a href="./menu.html" class="mobile-link opacity-0 hover:text-[#FFD99F] transition-all">Menu</a>
-                <a href="./contact.html" class="mobile-link opacity-0 hover:text-[#FFD99F] transition-all">Contact</a>
-                <button class="mt-4 px-8 py-3 rounded-full border border-[#FFD99F] text-[#FFD99F] mobile-link opacity-0">
-                    Reserve table
-                </button>
-            </div>
-        </nav>
+        </div>
+    
+        <div id="mobileMenu" class="fixed inset-0 bg-[#1B2D1F] z-[90] flex flex-col items-center justify-center gap-8 text-2xl font-serif translate-x-full transition-transform duration-500 ease-in-out">
+            <a href="./index.html" class="mobile-link opacity-0 hover:text-[#FFD99F] transition-all">Home</a>
+            <a href="./about.html" class="mobile-link opacity-0 hover:text-[#FFD99F] transition-all">About</a>
+            <a href="./menu.html" class="mobile-link opacity-0 hover:text-[#FFD99F] transition-all">Menu</a>
+            <a href="./contact.html" class="mobile-link opacity-0 hover:text-[#FFD99F] transition-all">Contact</a>
+            <button class="mt-4 px-8 py-3 rounded-full border border-[#FFD99F] text-[#FFD99F] mobile-link opacity-0">
+                <a href="./menu.html">Menu</a>
+            </button>
+        </div>
+    </nav>
 
     
           <div class="flex items-center flex-col font-serif justify-center px-4">
@@ -768,6 +776,7 @@
 <!-- gallery end -->
 
 
+
 <!-- footer -->
 
 <footer class="bg-[#FFF4DE] font-serif text-[#001524] py-16 px-6 sm:px-12 lg:px-24 border-t border-[#001524]/10">
@@ -777,7 +786,7 @@
           <div class="max-w-xl">
               <span class="italic text-2xl font-[myfont] font-bold block mb-2">It was a memorable</span>
               <h2 class="text-4xl md:text-5xl lg:text-6xl leading-tight font-medium">
-                  From farm to table excellence in every bite
+                Excellence in every bite
               </h2>
           </div>
           
@@ -792,28 +801,28 @@
           <div class="space-y-6 font-semibold font-['Taviraj']">
               <h3 class="font-bold text-lg">Address</h3>
               <p class="leading-loose ">
-                  500 Terry Francine street, TD<br>san Francisco, CA 94158
-              </p>
+                547 Steeles Ave E,
+                Brampton, ON L6W 4S2</p>
               <p class="leading-loose ">
-                  Le Bistrovia 27 Rue de<br>innovation 75004 Paris, France
-              </p>
+                12270 Yonge St Unit A-2,
+                Richmond Hill L4E 0W5</p>
           </div>
 
           <div class="space-y-6">
-              <h3 class="font-bold text-lg">Bistrovia opening hours</h3>
+              <h3 class="font-bold text-lg">Opening hours</h3>
               <ul class="space-y-3 opacity-80">
-                  <li class="flex justify-between"><span>Breakfast:</span> <span>10.00AM – 11:00AM</span></li>
-                  <li class="flex justify-between"><span>Lunch:</span> <span>12.00PM – 02:00PM</span></li>
-                  <li class="flex justify-between"><span>Dinner:</span> <span>08.00AM – 11:00PM</span></li>
+                  <li class="flex justify-between"><span>Monday to Thursday:</span> <span>11.00AM – 10:30AM</span></li>
+                  <li class="flex justify-between"><span>Friday & Saturday:</span> <span>11.00PM – 11:00PM</span></li>
+                  <!-- <li class="flex justify-between"><span>Dinner:</span> <span>08.00AM – 11:00PM</span></li> -->
               </ul>
           </div>
 
           <div class="space-y-6">
               <h3 class="font-bold text-lg">Let's connect</h3>
               <ul class="space-y-3 font-sans ">
-                  <li>+ (643) 461-630 866</li>
-                  <li>+ (112) 123 456 789</li>
-                  <li class="pt-4"><a href="mailto:restaurants@mail.com" class="underline decoration-1 underline-offset-4">restaurants@mail.com</a></li>
+                  <li>(905) 497-3876</li>
+                  <li>(905) 497-0497</li>
+                  <!-- <li class="pt-4"><a href="mailto:restaurants@mail.com" class="underline decoration-1 underline-offset-4">restaurants@mail.com</a></li> -->
               </ul>
           </div>
 
@@ -836,6 +845,8 @@
 </footer>
 
 <!-- footer end -->
+
+
 
 
 
