@@ -6,6 +6,7 @@
     <title>Menu</title>
     <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
     <script src="https://cdn.jsdelivr.net/npm/alpinejs@3.x.x/dist/cdn.min.js" defer></script>
+    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@200;400;700;800&family=Playfair+Display:ital,wght@0,700;1,700&display=swap" rel="stylesheet">
    
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -13,6 +14,11 @@
 
 <link rel="stylesheet" href="style.css">
 </head>
+<style>
+  /* Only keeping Font Family declarations as they cannot be done via Tailwind CDN without a config file */
+  .font-plus { font-family: 'Plus Jakarta Sans', sans-serif; }
+  .font-serif-play { font-family: 'Playfair Display', serif; }
+</style>
 <body>
     <div class=" ">
         <!-- header -->
@@ -54,7 +60,7 @@
                 <div class="md:hidden font-serif text-[#FFD99F] text-xl font-bold">
                     <a href="./index.html">
 
-                        <img src="./public/images/logo.png" width="70px" alt="" >
+                        <img src="./public/images/caravanlogo.png" width="70px" alt="" >
                     </a>
                 </div>
     
@@ -132,593 +138,180 @@
 <!-- header end -->
 
 <!-- menu -->
-<div class="bg-[#FFF4DE] min-h-screen">
 
-<!-- Salads -->
+<div class="bg-[#FFF4DE] text-[#001528] antialiased font-plus overflow-x-hidden">
 
-<div class="max-w-7xl mx-auto py-12 px-6 md:py-16 md:px-8">
-  
-  <div class="text-4xl md:text-5xl font-[Taviraj] font-semibold text-gray-900 mb-12 text-center md:text-left">
-    Salads
-  </div>
-
-  <div class="grid grid-cols-1 lg:grid-cols-2 gap-x-16 gap-y-8 md:gap-y-12">
-
-    <div class="group flex items-start gap-5 p-4 rounded-2xl transition-all duration-300 hover:bg-white hover:shadow-xl hover:shadow-orange-200/50 hover:-translate-y-1">
-      <div class="flex-shrink-0 w-20 h-20 overflow-hidden rounded-xl">
-        <img src="https://upload.wikimedia.org/wikipedia/commons/b/bc/Afghan-Salad.JPG" 
-             class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110">
+  <div class="max-w-6xl mx-auto px-6 py-12 md:py-24">
+      
+      <div class="text-center mb-24 md:mb-32 opacity-0 translate-y-8 transition-all duration-1000 ease-out" id="header">
+          <span class="text-[10px] tracking-[0.5em] uppercase font-bold text-[#132418] mb-4 block opacity-60">The Art of the Grill</span>
+          <h1 class="font-serif-play text-6xl md:text-8xl text-[#001528] mb-8 italic">Caravan Kaboob house</h1>
+          <div class="h-px bg-[#001528] mx-auto mb-8 w-0 transition-all duration-[1500ms] delay-500" id="header-line"></div>
+       
       </div>
 
-      <div class="flex-1">
-        <div class="flex flex-col sm:flex-row justify-between items-start sm:items-center gap-1">
-          <div class="text-xl md:text-2xl font-semibold text-gray-800">Afghani Salad</div>
-          <!-- <div class="text-lg font-bold text-orange-600">$ 30.00 <span class="text-xs font-normal text-gray-400">USD</span></div> -->
-        </div>
-        <div class="text-gray-500 mt-2 leading-relaxed text-sm md:text-base">
-          Small, Medium, Large.
-        </div>
-      </div>
-    </div>
+      <section class="mb-32">
+          <div class="flex items-baseline gap-4 mb-16">
+              <h2 class="font-serif-play text-3xl md:text-4xl italic text-[#001528]">Platters</h2>
+              <div class="flex-grow h-px bg-[#132418] opacity-10"></div>
+              <span class="text-[9px] uppercase tracking-widest font-bold text-[#132418] opacity-40">Share the Feast</span>
+          </div>
+          
+          <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6 md:gap-8">
+              <div class="group bg-white p-8 md:p-10 border border-transparent rounded-sm flex flex-col transition-all duration-500 hover:-translate-y-2 hover:shadow-xl hover:border-[#132418]/20">
+                  <span class="text-[9px] font-black uppercase tracking-[0.2em] text-[#132418] opacity-50">01 — Feeds 2-3</span>
+                  <h3 class="text-xl font-extrabold mt-4 mb-6 uppercase tracking-tight text-[#001528]">Value</h3>
+                  <ul class="text-xs space-y-4 text-[#132418] font-medium opacity-70 flex-grow">
+                      <li>• 1 Chicken Skewer</li>
+                      <li>• 2 Kofta Skewers</li>
+                      <li>• Fries, Salad & Rice</li>
+                  </ul>
+              </div>
 
-    <div class="group flex items-start gap-5 p-4 rounded-2xl transition-all duration-300 hover:bg-white hover:shadow-xl hover:shadow-orange-200/50 hover:-translate-y-1">
-      <div class="flex-shrink-0 w-20 h-20 overflow-hidden rounded-xl">
-        <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSygFyoMN_jFK2PphvEghyT8sOh3VxvGk7u2w&s" 
-             class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110">
-      </div>
+              <div class="group bg-white p-8 md:p-10 border-t-4 border-[#132418] rounded-sm flex flex-col shadow-sm transition-all duration-500 hover:-translate-y-2 hover:shadow-2xl">
+                  <span class="text-[9px] font-black uppercase tracking-[0.2em] text-[#132418] opacity-50">02 — Feeds 5</span>
+                  <h3 class="text-xl font-extrabold mt-4 mb-6 uppercase tracking-tight text-[#001528]">Max</h3>
+                  <ul class="text-xs space-y-4 text-[#132418] font-medium opacity-70 flex-grow">
+                      <li>• Chicken & Tandoori</li>
+                      <li>• Chicken Kofta Skewer</li>
+                      <li>• 2 Kofta Skewers</li>
+                  </ul>
+              </div>
 
-      <div class="flex-1">
-        <div class="flex flex-col sm:flex-row justify-between items-start sm:items-center gap-1">
-          <div class="text-xl md:text-2xl font-semibold text-gray-800">Greek Salads</div>
-          <!-- <div class="text-lg font-bold text-orange-600">$ 30.00 <span class="text-xs font-normal text-gray-400">USD</span></div> -->
-        </div>
-        <div class="text-gray-500 mt-2 leading-relaxed text-sm md:text-base">
-          Small, Medium, Large.
-        </div>
-      </div>
-    </div>
+              <div class="group bg-white p-8 md:p-10 border border-transparent rounded-sm flex flex-col transition-all duration-500 hover:-translate-y-2 hover:shadow-xl hover:border-[#132418]/20">
+                  <span class="text-[9px] font-black uppercase tracking-[0.2em] text-[#132418] opacity-50">03 — Feeds 5</span>
+                  <h3 class="text-xl font-extrabold mt-4 mb-6 uppercase tracking-tight text-[#001528]">Family</h3>
+                  <ul class="text-xs space-y-4 text-[#132418] font-medium opacity-70 flex-grow">
+                      <li>• 1 Whole Chicken</li>
+                      <li>• 2 Chaplee Pieces</li>
+                      <li>• French Fries & Salad</li>
+                  </ul>
+              </div>
 
+              <div class="bg-[#001528] p-8 md:p-10 shadow-2xl rounded-sm lg:-translate-y-4 border border-[#132418] transition-all duration-700 hover:scale-[1.02]">
+                  <span class="text-[9px] uppercase tracking-[0.2em] font-extrabold text-[#FFF4DE] opacity-50">04 — The Feast</span>
+                  <h3 class="font-serif-play text-2xl mt-4 mb-6 italic text-[#FFF4DE]">Ultimate</h3>
+                  <ul class="text-xs space-y-4 text-[#FFF4DE] font-light opacity-80">
+                      <li>• 14 Specialty Skewers</li>
+                      <li>• Hummus & Large Salad</li>
+                      <li>• 5 Fresh Naans</li>
+                  </ul>
+              </div>
+          </div>
+      </section>
 
-    <div class="group flex items-start gap-5 p-4 rounded-2xl transition-all duration-300 hover:bg-white hover:shadow-xl hover:shadow-orange-200/50 hover:-translate-y-1">
-      <div class="flex-shrink-0 w-20 h-20 overflow-hidden rounded-xl">
-        <img src="https://playswellwithbutter.com/wp-content/uploads/2024/06/Charred-Sweet-Corn-Caesar-Salad-12.jpg" 
-             class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110">
-      </div>
+      <section class="mb-32">
+          <div class="grid grid-cols-1 lg:grid-cols-12 gap-12 md:gap-16">
+              <div class="lg:col-span-4 border-l border-[#132418]/20 pl-8">
+                  <h2 class="font-serif-play text-5xl text-[#001528] mb-6">Main <br class="hidden lg:block"> Courses</h2>
+                  <p class="text-[10px] uppercase tracking-widest font-black text-[#132418] opacity-40 italic">Signature Dinners</p>
+              </div>
+              
+              <div class="lg:col-span-8 grid grid-cols-1 md:grid-cols-2 gap-x-12 md:gap-x-16 gap-y-12">
+                  <div class="group border-b border-[#132418]/5 pb-6 transition-all duration-300 hover:border-[#132418]/40">
+                      <h4 class="font-extrabold text-sm uppercase tracking-wider text-[#001528] mb-2 group-hover:translate-x-2 transition-transform">Chicken Breast Dinner</h4>
+                      <p class="text-xs text-[#132418] opacity-60 font-medium leading-relaxed">Tender cubes of boneless chicken breast seasoned with mild spices.</p>
+                  </div>
 
-      <div class="flex-1">
-        <div class="flex flex-col sm:flex-row justify-between items-start sm:items-center gap-1">
-          <div class="text-xl md:text-2xl font-semibold text-gray-800">Caesar Salad</div>
-          <!-- <div class="text-lg font-bold text-orange-600">$ 30.00 <span class="text-xs font-normal text-gray-400">USD</span></div> -->
-        </div>
-        <div class="text-gray-500 mt-2 leading-relaxed text-sm md:text-base">
-          Small, Medium, Large.
-        </div>
-      </div>
-    </div>
+                  <div class="group border-b border-[#132418]/5 pb-6 transition-all duration-300 hover:border-[#132418]/40">
+                      <div class="flex items-center justify-between mb-2">
+                          <h4 class="font-extrabold text-sm uppercase tracking-wider text-[#001528] group-hover:translate-x-2 transition-transform">Tandoori Dinner</h4>
+                          <span class="text-[8px] font-black border border-red-200 text-red-700 px-1.5 py-0.5 rounded italic">SPICY</span>
+                      </div>
+                      <p class="text-xs text-[#132418] opacity-60 font-medium leading-relaxed">Marinated in yogurt and spicy tandoori masala, grilled on charcoal.</p>
+                  </div>
+                  
+                  <div class="md:col-span-2 grid grid-cols-1 md:grid-cols-2 gap-8 bg-[#132418] p-8 md:p-12 rounded-sm text-[#FFF4DE] transition-transform duration-500 hover:scale-[1.01]">
+                      <div class="hover:opacity-80 transition-opacity cursor-default">
+                          <h3 class="font-serif-play text-2xl mb-2 italic">Caravan Special</h3>
+                          <p class="text-xs font-light opacity-70 leading-relaxed">Tender dark chicken seasoned with house spices and freshly baked.</p>
+                      </div>
+                      <div class="hover:opacity-80 transition-opacity cursor-default">
+                          <h3 class="font-serif-play text-2xl mb-2 italic">Sultani Dinner</h3>
+                          <p class="text-xs font-light opacity-70 leading-relaxed">Combination of beef tenderloin skewer and traditional kofta kabob.</p>
+                      </div>
+                  </div>
 
+                  <div class="group border-b border-[#132418]/5 pb-6">
+                      <h4 class="font-extrabold text-sm uppercase tracking-wider text-[#001528] mb-2">Lamb Shank Dinner</h4>
+                      <p class="text-xs text-[#132418] opacity-60 font-medium leading-relaxed">Lamb shanks slow-simmered for 4 hours. Meltingly tender.</p>
+                  </div>
 
-    
-  </div>
-  <!-- end menu Salads -->
+                  <div class="group border-b border-[#132418]/5 pb-6">
+                      <h4 class="font-extrabold text-sm uppercase tracking-wider text-[#001528] mb-2">Sea Bass</h4>
+                      <p class="text-xs text-[#132418] opacity-60 font-medium leading-relaxed italic underline decoration-[#132418]/20 underline-offset-8">Oven-baked, oil-free, served with lemon and rice.</p>
+                  </div>
+              </div>
+          </div>
+      </section>
 
-<!-- Wraps -->
+      <section class="mb-32">
+          <div class="bg-white/40 border border-white p-10 md:p-20 rounded-sm text-center backdrop-blur-sm transition-all duration-700 hover:bg-white/60">
+              <h2 class="font-serif-play text-4xl text-[#001528] mb-4 italic">The Wraps</h2>
+              <p class="text-[10px] uppercase font-bold text-[#132418] tracking-[0.4em] mb-12 opacity-50">Served with Garlic & Mint Emulsion</p>
+              <div class="grid grid-cols-2 md:grid-cols-4 gap-y-8 gap-x-4 md:gap-x-12">
+                  <span class="text-[11px] font-black uppercase tracking-widest text-[#001528] hover:-translate-y-1 transition-transform cursor-default">Chicken</span>
+                  <span class="text-[11px] font-black uppercase tracking-widest text-[#001528] hover:-translate-y-1 transition-transform cursor-default">Beef Tikka</span>
+                  <span class="text-[11px] font-black uppercase tracking-widest text-red-900 italic">Spicy Chaplee</span>
+                  <span class="text-[11px] font-black uppercase tracking-widest text-[#001528] hover:-translate-y-1 transition-transform cursor-default">Kofta</span>
+              </div>
+          </div>
+      </section>
 
-<div class="max-w-7xl mx-auto py-12 px-6 md:py-16 md:px-8">
-  
-  <div class="text-4xl md:text-5xl font-[Taviraj] font-semibold text-gray-900 mb-12 text-center md:text-left">
-    Wraps
-  </div>
+      <section class="grid grid-cols-1 md:grid-cols-3 gap-8 md:gap-12">
+          <div class="bg-white p-8 md:p-10 border-l border-[#132418]/10 transition-all duration-300 hover:border-[#132418]">
+              <h3 class="font-serif-play text-3xl text-[#001528] mb-8">Sides</h3>
+              <ul class="space-y-4 text-[10px] font-extrabold uppercase tracking-widest text-[#132418] opacity-70">
+                  <li class="flex justify-between">Hummus <span class="opacity-20">••••</span></li>
+                  <li class="flex justify-between">Boulagnee <span class="opacity-20">••••</span></li>
+                  <li class="flex justify-between">Kabile Rice <span class="opacity-20">••••</span></li>
+                  <li class="flex justify-between text-[#001528] font-black underline underline-offset-4">Whole Chicken</li>
+              </ul>
+          </div>
 
-  <div class="grid grid-cols-1 lg:grid-cols-2 gap-x-16 gap-y-8 md:gap-y-12">
+          <div class="p-8 md:p-10">
+              <h3 class="font-serif-play text-3xl text-[#001528] mb-8">Sweets</h3>
+              <div class="space-y-8">
+                  <div class="hover:translate-x-2 transition-transform duration-300">
+                      <h5 class="text-xs font-black uppercase tracking-widest text-[#001528] mb-2">Firnee</h5>
+                      <p class="text-[10px] text-[#132418] opacity-60 font-medium italic">Afghan ground rice pudding with cardamom.</p>
+                  </div>
+                  <div class="hover:translate-x-2 transition-transform duration-300">
+                      <h5 class="text-xs font-black uppercase tracking-widest text-[#001528] mb-2">Mango Pudding</h5>
+                      <p class="text-[10px] text-[#132418] opacity-60 font-medium italic">Creamy tropical mango puree.</p>
+                  </div>
+              </div>
+          </div>
 
-    <div class="group flex items-start gap-5 p-4 rounded-2xl transition-all duration-300 hover:bg-white hover:shadow-xl hover:shadow-orange-200/50 hover:-translate-y-1">
-      <div class="flex-shrink-0 w-20 h-20 overflow-hidden rounded-xl">
-        <img src="https://www.awesomecuisine.com/wp-content/uploads/2013/07/Grilled-Chicken-Wrap.jpg" 
-             class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110">
-      </div>
-
-      <div class="flex-1">
-        <div class="flex flex-col sm:flex-row justify-between items-start sm:items-center gap-1">
-          <div class="text-xl md:text-2xl font-semibold text-gray-800">Chicken Wrap</div>
-          <!-- <div class="text-lg font-bold text-orange-600">$ 30.00 <span class="text-xs font-normal text-gray-400">USD</span></div> -->
-        </div>
-        <div class="text-gray-500 mt-2 leading-relaxed text-sm md:text-base">
-          <!-- Fresh greens, black beans, and corn tossed in a zesty lime vinaigrette. -->
-        </div>
-      </div>
-    </div>
-
-    <div class="group flex items-start gap-5 p-4 rounded-2xl transition-all duration-300 hover:bg-white hover:shadow-xl hover:shadow-orange-200/50 hover:-translate-y-1">
-      <div class="flex-shrink-0 w-20 h-20 overflow-hidden rounded-xl">
-        <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcS-w-hPLhgftpwzteZfXmgUNZs44mNM1xbrGA&s" 
-             class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110">
-      </div>
-
-      <div class="flex-1">
-        <div class="flex flex-col sm:flex-row justify-between items-start sm:items-center gap-1">
-          <div class="text-xl md:text-2xl font-semibold text-gray-800">Kofta wrap</div>
-          <!-- <div class="text-lg font-bold text-orange-600">$ 30.00 <span class="text-xs font-normal text-gray-400">USD</span></div> -->
-        </div>
-        <div class="text-gray-500 mt-2 leading-relaxed text-sm md:text-base">
-          <!-- Fresh greens, black beans, and corn tossed in a zesty lime vinaigrette. -->
-        </div>
-      </div>
-    </div>
-
-
-    <div class="group flex items-start gap-5 p-4 rounded-2xl transition-all duration-300 hover:bg-white hover:shadow-xl hover:shadow-orange-200/50 hover:-translate-y-1">
-      <div class="flex-shrink-0 w-20 h-20 overflow-hidden rounded-xl">
-        <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSyMrgqWkVZJaMA-3HxtuEzDCDBKt8S1SjTRQ&s" 
-             class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110">
-      </div>
-
-      <div class="flex-1">
-        <div class="flex flex-col sm:flex-row justify-between items-start sm:items-center gap-1">
-          <div class="text-xl md:text-2xl font-semibold text-gray-800">Chicken Kofta Wrap</div>
-          <!-- <div class="text-lg font-bold text-orange-600">$ 30.00 <span class="text-xs font-normal text-gray-400">USD</span></div> -->
-        </div>
-        <div class="text-gray-500 mt-2 leading-relaxed text-sm md:text-base">
-          <!-- Fresh greens, black beans, and corn tossed in a zesty lime vinaigrette. -->
-        </div>
-      </div>
-    </div>
-
-
-    <div class="group flex items-start gap-5 p-4 rounded-2xl transition-all duration-300 hover:bg-white hover:shadow-xl hover:shadow-orange-200/50 hover:-translate-y-1">
-      <div class="flex-shrink-0 w-20 h-20 overflow-hidden rounded-xl">
-        <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSdJf5WZuWHKea26F1_0McGn5t2xASVhhfjRA&s" 
-             class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110">
-      </div>
-
-      <div class="flex-1">
-        <div class="flex flex-col sm:flex-row justify-between items-start sm:items-center gap-1">
-          <div class="text-xl md:text-2xl font-semibold text-gray-800">Spicy Ground Wrap</div>
-          <!-- <div class="text-lg font-bold text-orange-600">$ 30.00 <span class="text-xs font-normal text-gray-400">USD</span></div> -->
-        </div>
-        <div class="text-gray-500 mt-2 leading-relaxed text-sm md:text-base">
-          <!-- Fresh greens, black beans, and corn tossed in a zesty lime vinaigrette. -->
-        </div>
-      </div>
-    </div>
-
-
-
-
-    <div class="group flex items-start gap-5 p-4 rounded-2xl transition-all duration-300 hover:bg-white hover:shadow-xl hover:shadow-orange-200/50 hover:-translate-y-1">
-      <div class="flex-shrink-0 w-20 h-20 overflow-hidden rounded-xl">
-        <img src="https://d1w7312wesee68.cloudfront.net/Zf-cFIroxCH8XDYegTGARakgTHDxTLZnEF_UJb_m9n8/resize:fit:720:720/plain/s3://toasttab/menu_service/restaurants/c135d007-2252-4bbd-91e6-242aec2198b2/MenuItem/c44646e4-e892-4dae-aebe-b05af8a10713.jpg" 
-             class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110">
-      </div>
-
-      <div class="flex-1">
-        <div class="flex flex-col sm:flex-row justify-between items-start sm:items-center gap-1">
-          <div class="text-xl md:text-2xl font-semibold text-gray-800">Beef Tikka Wrap</div>
-          <!-- <div class="text-lg font-bold text-orange-600">$ 30.00 <span class="text-xs font-normal text-gray-400">USD</span></div> -->
-        </div>
-        <div class="text-gray-500 mt-2 leading-relaxed text-sm md:text-base">
-          <!-- Fresh greens, black beans, and corn tossed in a zesty lime vinaigrette. -->
-        </div>
-      </div>
-    </div>
+          <div class="bg-[#001528] p-8 md:p-10 text-[#FFF4DE] shadow-xl transition-all duration-500 hover:shadow-[#001528]/20">
+              <h3 class="font-serif-play text-3xl mb-8 italic">Beverages</h3>
+              <ul class="space-y-6 text-[10px] font-bold uppercase tracking-[0.2em]">
+                  <li class="flex justify-between opacity-70"><span>Tea Pot</span></li>
+                  <li class="flex justify-between opacity-70"><span>Mango Juice</span></li>
+                  <li class="flex justify-between text-white font-black underline underline-offset-4 italic"><span>Dough (House)</span></li>
+                  <li class="flex justify-between opacity-70"><span>Coffee / Pop</span></li>
+              </ul>
+          </div>
+      </section>
 
 
-    <div class="group flex items-start gap-5 p-4 rounded-2xl transition-all duration-300 hover:bg-white hover:shadow-xl hover:shadow-orange-200/50 hover:-translate-y-1">
-      <div class="flex-shrink-0 w-20 h-20 overflow-hidden rounded-xl">
-        <img src="https://d1w7312wesee68.cloudfront.net/Zf-cFIroxCH8XDYegTGARakgTHDxTLZnEF_UJb_m9n8/resize:fit:720:720/plain/s3://toasttab/menu_service/restaurants/c135d007-2252-4bbd-91e6-242aec2198b2/MenuItem/c44646e4-e892-4dae-aebe-b05af8a10713.jpg" 
-             class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110">
-      </div>
-
-      <div class="flex-1">
-        <div class="flex flex-col sm:flex-row justify-between items-start sm:items-center gap-1">
-          <div class="text-xl md:text-2xl font-semibold text-gray-800">Chaplee Wrap</div>
-          <!-- <div class="text-lg font-bold text-orange-600">$ 30.00 <span class="text-xs font-normal text-gray-400">USD</span></div> -->
-        </div>
-        <div class="text-gray-500 mt-2 leading-relaxed text-sm md:text-base">
-          Spicy Beef.
-        </div>
-      </div>
-    </div>
-
-    <div class="group flex items-start gap-5 p-4 rounded-2xl transition-all duration-300 hover:bg-white hover:shadow-xl hover:shadow-orange-200/50 hover:-translate-y-1">
-      <div class="flex-shrink-0 w-20 h-20 overflow-hidden rounded-xl">
-        <img src="https://www.licious.in/blog/wp-content/uploads/2020/12/Chicken-Wrap.jpg" 
-             class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110">
-      </div>
-
-      <div class="flex-1">
-        <div class="flex flex-col sm:flex-row justify-between items-start sm:items-center gap-1">
-          <div class="text-xl md:text-2xl font-semibold text-gray-800">Chicken Chaplee Wrap</div>
-          <!-- <div class="text-lg font-bold text-orange-600">$ 30.00 <span class="text-xs font-normal text-gray-400">USD</span></div> -->
-        </div>
-        <div class="text-gray-500 mt-2 leading-relaxed text-sm md:text-base">
-          <!-- Fresh greens, black beans, and corn tossed in a zesty lime vinaigrette. -->
-        </div>
-      </div>
-    </div>
-
-    <div class="group flex items-start gap-5 p-4 rounded-2xl transition-all duration-300 hover:bg-white hover:shadow-xl hover:shadow-orange-200/50 hover:-translate-y-1">
-      <div class="flex-shrink-0 w-20 h-20 overflow-hidden rounded-xl">
-        <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcREE-H5YLqefMp29sObOTeGActF1itXpMiMkQ&s" 
-             class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110">
-      </div>
-
-      <div class="flex-1">
-        <div class="flex flex-col sm:flex-row justify-between items-start sm:items-center gap-1">
-          <div class="text-xl md:text-2xl font-semibold text-gray-800">Chicken Curry Wrap</div>
-          <!-- <div class="text-lg font-bold text-orange-600">$ 30.00 <span class="text-xs font-normal text-gray-400">USD</span></div> -->
-        </div>
-        <div class="text-gray-500 mt-2 leading-relaxed text-sm md:text-base">
-          <!-- Fresh greens, black beans, and corn tossed in a zesty lime vinaigrette. -->
-        </div>
-      </div>
-    </div>
-
-    <div class="group flex items-start gap-5 p-4 rounded-2xl transition-all duration-300 hover:bg-white hover:shadow-xl hover:shadow-orange-200/50 hover:-translate-y-1">
-      <div class="flex-shrink-0 w-20 h-20 overflow-hidden rounded-xl">
-        <img src="https://images.immediate.co.uk/production/volatile/sites/30/2020/08/recipe-image-legacy-id-4336_11-abee6fb.jpg?quality=90&resize=440,400" 
-             class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110">
-      </div>
-
-      <div class="flex-1">
-        <div class="flex flex-col sm:flex-row justify-between items-start sm:items-center gap-1">
-          <div class="text-xl md:text-2xl font-semibold text-gray-800">Fish Wrap</div>
-          <!-- <div class="text-lg font-bold text-orange-600">$ 30.00 <span class="text-xs font-normal text-gray-400">USD</span></div> -->
-        </div>
-        <div class="text-gray-500 mt-2 leading-relaxed text-sm md:text-base">
-          Haddock (Breaded).
-        </div>
-      </div>
-    </div>
-
-    <div class="group flex items-start gap-5 p-4 rounded-2xl transition-all duration-300 hover:bg-white hover:shadow-xl hover:shadow-orange-200/50 hover:-translate-y-1">
-      <div class="flex-shrink-0 w-20 h-20 overflow-hidden rounded-xl">
-        <img src="https://images.immediate.co.uk/production/volatile/sites/30/2020/08/recipe-image-legacy-id-4336_11-abee6fb.jpg?quality=90&resize=440,400" 
-             class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110">
-      </div>
-
-      <div class="flex-1">
-        <div class="flex flex-col sm:flex-row justify-between items-start sm:items-center gap-1">
-          <div class="text-xl md:text-2xl font-semibold text-gray-800">Fish Wrap Tilapala</div>
-          <!-- <div class="text-lg font-bold text-orange-600">$ 30.00 <span class="text-xs font-normal text-gray-400">USD</span></div> -->
-        </div>
-        <div class="text-gray-500 mt-2 leading-relaxed text-sm md:text-base">
-          Fillet
-        </div>
-      </div>
-    </div>
-
-    <div class="group flex items-start gap-5 p-4 rounded-2xl transition-all duration-300 hover:bg-white hover:shadow-xl hover:shadow-orange-200/50 hover:-translate-y-1">
-      <div class="flex-shrink-0 w-20 h-20 overflow-hidden rounded-xl">
-        <img src="https://eatplant-based.com/wp-content/uploads/2024/06/veggie-wraps-2.jpg" 
-             class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110">
-      </div>
-
-      <div class="flex-1">
-        <div class="flex flex-col sm:flex-row justify-between items-start sm:items-center gap-1">
-          <div class="text-xl md:text-2xl font-semibold text-gray-800">Veggie Wrap</div>
-          <!-- <div class="text-lg font-bold text-orange-600">$ 30.00 <span class="text-xs font-normal text-gray-400">USD</span></div> -->
-        </div>
-        <div class="text-gray-500 mt-2 leading-relaxed text-sm md:text-base">
-          <!-- Fresh greens, black beans, and corn tossed in a zesty lime vinaigrette. -->
-        </div>
-      </div>
-    </div>
-
-    <div class="group flex items-start gap-5 p-4 rounded-2xl transition-all duration-300 hover:bg-white hover:shadow-xl hover:shadow-orange-200/50 hover:-translate-y-1">
-      <div class="flex-shrink-0 w-20 h-20 overflow-hidden rounded-xl">
-        <img src="https://www.easycookingwithmolly.com/wp-content/uploads/2019/09/indian-tandoori-tacos-recipe.jpg" 
-             class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110">
-      </div>
-
-      <div class="flex-1">
-        <div class="flex flex-col sm:flex-row justify-between items-start sm:items-center gap-1">
-          <div class="text-xl md:text-2xl font-semibold text-gray-800">Tandoori Fish Wrap</div>
-          <!-- <div class="text-lg font-bold text-orange-600">$ 30.00 <span class="text-xs font-normal text-gray-400">USD</span></div> -->
-        </div>
-        <div class="text-gray-500 mt-2 leading-relaxed text-sm md:text-base">
-          <!-- Fresh greens, black beans, and corn tossed in a zesty lime vinaigrette. -->
-        </div>
-      </div>
-    </div>
-
-
-<!-- end menu wrap -->
 
   </div>
 
-
-
-
-    <div class="max-w-7xl mx-auto py-12 px-6 md:py-16 md:px-8">
-  
-      <div class="text-4xl md:text-5xl font-[Taviraj] font-semibold text-gray-900 mb-12 text-center md:text-left">
-        Platter
-      </div>
-  
-      <div class="grid grid-cols-1 lg:grid-cols-2 gap-x-16 gap-y-8 md:gap-y-12">
-  
-        <div class="group flex items-start gap-5 p-4 rounded-2xl transition-all duration-300 hover:bg-white hover:shadow-xl hover:shadow-orange-200/50 hover:-translate-y-1">
-          <div class="flex-shrink-0 w-20 h-20 overflow-hidden rounded-xl">
-            <img src="https://images.unsplash.com/photo-1540189549336-e6e99c3679fe" 
-                 class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110">
-          </div>
-  
-          <div class="flex-1">
-            <div class="flex flex-col sm:flex-row justify-between items-start sm:items-center gap-1">
-              <div class="text-xl md:text-2xl font-semibold text-gray-800">Family platter</div>
-              <!-- <div class="text-lg font-bold text-orange-600">$ 30.00 <span class="text-xs font-normal text-gray-400">USD</span></div> -->
-            </div>
-            <div class="text-gray-500 mt-2 leading-relaxed text-sm md:text-base">
-              <!-- Fresh greens, black beans, and corn tossed in a zesty lime vinaigrette. -->
-            </div>
-          </div>
-        </div>
-
-        <div class="group flex items-start gap-5 p-4 rounded-2xl transition-all duration-300 hover:bg-white hover:shadow-xl hover:shadow-orange-200/50 hover:-translate-y-1">
-          <div class="flex-shrink-0 w-20 h-20 overflow-hidden rounded-xl">
-            <img src="https://images.unsplash.com/photo-1540189549336-e6e99c3679fe" 
-                 class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110">
-          </div>
-  
-          <div class="flex-1">
-            <div class="flex flex-col sm:flex-row justify-between items-start sm:items-center gap-1">
-              <div class="text-xl md:text-2xl font-semibold text-gray-800">Ultimate platter</div>
-              <!-- <div class="text-lg font-bold text-orange-600">$ 30.00 <span class="text-xs font-normal text-gray-400">USD</span></div> -->
-            </div>
-            <div class="text-gray-500 mt-2 leading-relaxed text-sm md:text-base">
-              <!-- Fresh greens, black beans, and corn tossed in a zesty lime vinaigrette. -->
-            </div>
-          </div>
-        </div>
-
-
-        <div class="group flex items-start gap-5 p-4 rounded-2xl transition-all duration-300 hover:bg-white hover:shadow-xl hover:shadow-orange-200/50 hover:-translate-y-1">
-          <div class="flex-shrink-0 w-20 h-20 overflow-hidden rounded-xl">
-            <img src="https://images.unsplash.com/photo-1540189549336-e6e99c3679fe" 
-                 class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110">
-          </div>
-  
-          <div class="flex-1">
-            <div class="flex flex-col sm:flex-row justify-between items-start sm:items-center gap-1">
-              <div class="text-xl md:text-2xl font-semibold text-gray-800">Value platter</div>
-              <!-- <div class="text-lg font-bold text-orange-600">$ 30.00 <span class="text-xs font-normal text-gray-400">USD</span></div> -->
-            </div>
-            <div class="text-gray-500 mt-2 leading-relaxed text-sm md:text-base">
-              <!-- Fresh greens, black beans, and corn tossed in a zesty lime vinaigrette. -->
-            </div>
-          </div>
-        </div>
-
-
-        <div class="group flex items-start gap-5 p-4 rounded-2xl transition-all duration-300 hover:bg-white hover:shadow-xl hover:shadow-orange-200/50 hover:-translate-y-1">
-          <div class="flex-shrink-0 w-20 h-20 overflow-hidden rounded-xl">
-            <img src="https://images.unsplash.com/photo-1540189549336-e6e99c3679fe" 
-                 class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110">
-          </div>
-  
-          <div class="flex-1">
-            <div class="flex flex-col sm:flex-row justify-between items-start sm:items-center gap-1">
-              <div class="text-xl md:text-2xl font-semibold text-gray-800">Max platter</div>
-              <!-- <div class="text-lg font-bold text-orange-600">$ 30.00 <span class="text-xs font-normal text-gray-400">USD</span></div> -->
-            </div>
-            <div class="text-gray-500 mt-2 leading-relaxed text-sm md:text-base">
-              <!-- Fresh greens, black beans, and corn tossed in a zesty lime vinaigrette. -->
-            </div>
-          </div>
-        </div>
-
-
-<!-- end menu platter -->
-
-      </div>
-    </div>
-
-
-<!-- bevrages -->
-
-<div class="max-w-7xl mx-auto py-12 px-6 md:py-16 md:px-8">
-  
-  <div class="text-4xl md:text-5xl font-[Taviraj] font-semibold text-gray-900 mb-12 text-center md:text-left">
-    bevrages
-  </div>
-
-  <div class="grid grid-cols-1 lg:grid-cols-2 gap-x-16 gap-y-8 md:gap-y-12">
-
-    <div class="group flex items-start gap-5 p-4 rounded-2xl transition-all duration-300 hover:bg-white hover:shadow-xl hover:shadow-orange-200/50 hover:-translate-y-1">
-      <div class="flex-shrink-0 w-20 h-20 overflow-hidden rounded-xl">
-        <img src="https://www.teaforturmeric.com/wp-content/uploads/2021/11/Masala-Chai-Tea-Recipe-Card.jpg" 
-             class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110">
-      </div>
-
-      <div class="flex-1">
-        <div class="flex flex-col sm:flex-row justify-between items-start sm:items-center gap-1">
-          <div class="text-xl md:text-2xl font-semibold text-gray-800">Tea</div>
-          <!-- <div class="text-lg font-bold text-orange-600">$ 30.00 <span class="text-xs font-normal text-gray-400">USD</span></div> -->
-        </div>
-        <div class="text-gray-500 mt-2 leading-relaxed text-sm md:text-base">
-          <!-- Fresh greens, black beans, and corn tossed in a zesty lime vinaigrette. -->
-        </div>
-      </div>
-    </div>
-
-    <div class="group flex items-start gap-5 p-4 rounded-2xl transition-all duration-300 hover:bg-white hover:shadow-xl hover:shadow-orange-200/50 hover:-translate-y-1">
-      <div class="flex-shrink-0 w-20 h-20 overflow-hidden rounded-xl">
-        <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQWmO174QFMHLkkRD-XuFb5tBiVvt9dQySjWg&s" 
-             class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110">
-      </div>
-
-      <div class="flex-1">
-        <div class="flex flex-col sm:flex-row justify-between items-start sm:items-center gap-1">
-          <div class="text-xl md:text-2xl font-semibold text-gray-800">Tea Pot</div>
-          <!-- <div class="text-lg font-bold text-orange-600">$ 30.00 <span class="text-xs font-normal text-gray-400">USD</span></div> -->
-        </div>
-        <div class="text-gray-500 mt-2 leading-relaxed text-sm md:text-base">
-          <!-- Fresh greens, black beans, and corn tossed in a zesty lime vinaigrette. -->
-        </div>
-      </div>
-    </div>
-
-
-    <div class="group flex items-start gap-5 p-4 rounded-2xl transition-all duration-300 hover:bg-white hover:shadow-xl hover:shadow-orange-200/50 hover:-translate-y-1">
-      <div class="flex-shrink-0 w-20 h-20 overflow-hidden rounded-xl">
-        <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTH-ZIobq8RxBro_CYrwSP90Ym7NGwcOOmHTg&s" 
-             class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110">
-      </div>
-
-      <div class="flex-1">
-        <div class="flex flex-col sm:flex-row justify-between items-start sm:items-center gap-1">
-          <div class="text-xl md:text-2xl font-semibold text-gray-800">Coffee</div>
-          <!-- <div class="text-lg font-bold text-orange-600">$ 30.00 <span class="text-xs font-normal text-gray-400">USD</span></div> -->
-        </div>
-        <div class="text-gray-500 mt-2 leading-relaxed text-sm md:text-base">
-          <!-- Fresh greens, black beans, and corn tossed in a zesty lime vinaigrette. -->
-        </div>
-      </div>
-    </div>
-
-
-    <div class="group flex items-start gap-5 p-4 rounded-2xl transition-all duration-300 hover:bg-white hover:shadow-xl hover:shadow-orange-200/50 hover:-translate-y-1">
-      <div class="flex-shrink-0 w-20 h-20 overflow-hidden rounded-xl">
-        <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSHtRMg5kVvs0hdfrmhFXCNZrirxGiHPvZb0g&s" 
-             class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110">
-      </div>
-
-      <div class="flex-1">
-        <div class="flex flex-col sm:flex-row justify-between items-start sm:items-center gap-1">
-          <div class="text-xl md:text-2xl font-semibold text-gray-800">Canned drinks</div>
-          <!-- <div class="text-lg font-bold text-orange-600">$ 30.00 <span class="text-xs font-normal text-gray-400">USD</span></div> -->
-        </div>
-        <div class="text-gray-500 mt-2 leading-relaxed text-sm md:text-base">
-          <!-- Fresh greens, black beans, and corn tossed in a zesty lime vinaigrette. -->
-        </div>
-      </div>
-    </div>
-
-
-
-
-    <div class="group flex items-start gap-5 p-4 rounded-2xl transition-all duration-300 hover:bg-white hover:shadow-xl hover:shadow-orange-200/50 hover:-translate-y-1">
-      <div class="flex-shrink-0 w-20 h-20 overflow-hidden rounded-xl">
-        <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRbbsQFRj8U2qr-5R_EZvrRF1xnHeg-h6B0pw&s" 
-             class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110">
-      </div>
-
-      <div class="flex-1">
-        <div class="flex flex-col sm:flex-row justify-between items-start sm:items-center gap-1">
-          <div class="text-xl md:text-2xl font-semibold text-gray-800">Oasis Bottled Drink</div>
-          <!-- <div class="text-lg font-bold text-orange-600">$ 30.00 <span class="text-xs font-normal text-gray-400">USD</span></div> -->
-        </div>
-        <div class="text-gray-500 mt-2 leading-relaxed text-sm md:text-base">
-          <!-- Fresh greens, black beans, and corn tossed in a zesty lime vinaigrette. -->
-        </div>
-      </div>
-    </div>
-
-
-    <div class="group flex items-start gap-5 p-4 rounded-2xl transition-all duration-300 hover:bg-white hover:shadow-xl hover:shadow-orange-200/50 hover:-translate-y-1">
-      <div class="flex-shrink-0 w-20 h-20 overflow-hidden rounded-xl">
-        <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRbbsQFRj8U2qr-5R_EZvrRF1xnHeg-h6B0pw&s" 
-             class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110">
-      </div>
-
-      <div class="flex-1">
-        <div class="flex flex-col sm:flex-row justify-between items-start sm:items-center gap-1">
-          <div class="text-xl md:text-2xl font-semibold text-gray-800">Bottled Drink</div>
-          <!-- <div class="text-lg font-bold text-orange-600">$ 30.00 <span class="text-xs font-normal text-gray-400">USD</span></div> -->
-        </div>
-        <div class="text-gray-500 mt-2 leading-relaxed text-sm md:text-base">
-          Pop, Minute, Maid, Faragello.
-        </div>
-      </div>
-    </div>
-
-
-    <div class="group flex items-start gap-5 p-4 rounded-2xl transition-all duration-300 hover:bg-white hover:shadow-xl hover:shadow-orange-200/50 hover:-translate-y-1">
-      <div class="flex-shrink-0 w-20 h-20 overflow-hidden rounded-xl">
-        <img src="https://images.unsplash.com/photo-1540189549336-e6e99c3679fe" 
-             class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110">
-      </div>
-
-      <div class="flex-1">
-        <div class="flex flex-col sm:flex-row justify-between items-start sm:items-center gap-1">
-          <div class="text-xl md:text-2xl font-semibold text-gray-800">Dough</div>
-          <!-- <div class="text-lg font-bold text-orange-600">$ 30.00 <span class="text-xs font-normal text-gray-400">USD</span></div> -->
-        </div>
-        <div class="text-gray-500 mt-2 leading-relaxed text-sm md:text-base">
-          <!-- Fresh greens, black beans, and corn tossed in a zesty lime vinaigrette. -->
-        </div>
-      </div>
-    </div>
-
-
-    <div class="group flex items-start gap-5 p-4 rounded-2xl transition-all duration-300 hover:bg-white hover:shadow-xl hover:shadow-orange-200/50 hover:-translate-y-1">
-      <div class="flex-shrink-0 w-20 h-20 overflow-hidden rounded-xl">
-        <img src="https://www.foodstories.shop/_next/image/?url=https%3A%2F%2Ffoodstories-backend-production.s3.ap-south-1.amazonaws.com%2Ffs_%2Fmedia%2Fcatalog%2Fproduct%2Fp%2Fe%2Fperrier-carbonated-water-750ml-1_62o2pymbkq6yrbrq.jpg&w=3840&q=75" 
-             class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110">
-      </div>
-
-      <div class="flex-1">
-        <div class="flex flex-col sm:flex-row justify-between items-start sm:items-center gap-1">
-          <div class="text-xl md:text-2xl font-semibold text-gray-800">Perrier</div>
-          <!-- <div class="text-lg font-bold text-orange-600">$ 30.00 <span class="text-xs font-normal text-gray-400">USD</span></div> -->
-        </div>
-        <div class="text-gray-500 mt-2 leading-relaxed text-sm md:text-base">
-          <!-- Fresh greens, black beans, and corn tossed in a zesty lime vinaigrette. -->
-        </div>
-      </div>
-    </div>
-
-
-    <div class="group flex items-start gap-5 p-4 rounded-2xl transition-all duration-300 hover:bg-white hover:shadow-xl hover:shadow-orange-200/50 hover:-translate-y-1">
-      <div class="flex-shrink-0 w-20 h-20 overflow-hidden rounded-xl">
-        <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTLwc6MdcqYeFyUETDCmL9ecMXCnioTY8Y5KA&s" 
-             class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110">
-      </div>
-
-      <div class="flex-1">
-        <div class="flex flex-col sm:flex-row justify-between items-start sm:items-center gap-1">
-          <div class="text-xl md:text-2xl font-semibold text-gray-800">Tropical delight</div>
-          <!-- <div class="text-lg font-bold text-orange-600">$ 30.00 <span class="text-xs font-normal text-gray-400">USD</span></div> -->
-        </div>
-        <div class="text-gray-500 mt-2 leading-relaxed text-sm md:text-base">
-          <!-- Fresh greens, black beans, and corn tossed in a zesty lime vinaigrette. -->
-        </div>
-      </div>
-    </div>
-
-
-    <div class="group flex items-start gap-5 p-4 rounded-2xl transition-all duration-300 hover:bg-white hover:shadow-xl hover:shadow-orange-200/50 hover:-translate-y-1">
-      <div class="flex-shrink-0 w-20 h-20 overflow-hidden rounded-xl">
-        <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQkbYnNYxWxaKKfkf0vDY7YH_rh81LT-Y7WvA&s" 
-             class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110">
-      </div>
-
-      <div class="flex-1">
-        <div class="flex flex-col sm:flex-row justify-between items-start sm:items-center gap-1">
-          <div class="text-xl md:text-2xl font-semibold text-gray-800">Mango Lassi</div>
-          <!-- <div class="text-lg font-bold text-orange-600">$ 30.00 <span class="text-xs font-normal text-gray-400">USD</span></div> -->
-        </div>
-        <div class="text-gray-500 mt-2 leading-relaxed text-sm md:text-base">
-          <!-- Fresh greens, black beans, and corn tossed in a zesty lime vinaigrette. -->
-        </div>
-      </div>
-    </div>
-
-
-
-
-<!-- end menu platter -->
-
-  </div>
+  <script>
+      window.onload = () => {
+          const header = document.getElementById('header');
+          const line = document.getElementById('header-line');
+          header.classList.remove('opacity-0', 'translate-y-8');
+          header.classList.add('opacity-100', 'translate-y-0');
+          line.classList.remove('w-0');
+          line.classList.add('w-24');
+      }
+  </script>
 </div>
 
 
-</div>
 
-  </div>
-
-
-<!-- Salads -->
 
 
 
@@ -792,7 +385,7 @@
           
           <div class="w-full lg:w-auto min-w-[320px] md:min-w-[450px] flex items-center border border-[#001524] rounded-full px-6 py-4 focus-within:ring-1 focus-within:ring-[#001524]">
               <input type="email" placeholder="Email address" class="bg-transparent flex-grow outline-none text-sm placeholder-[#001524]/50" />
-              <button class="text-sm font-bold uppercase tracking-wider ml-4 whitespace-nowrap">Subscribe now</button>
+              <button class="text-sm font-bold uppercase tracking-wider ml-4 whitespace-nowrap">Subscribe</button>
           </div>
       </div>
 
@@ -827,10 +420,10 @@
           </div>
 
           <div class="space-y-6">
-              <h3 class="font-bold text-lg">Book a table</h3>
-              <p class="opacity-80">Make your reservation for an unforgettable meal!</p>
+              <h3 class="font-bold text-lg"> Order Now</h3>
+              <p class="opacity-80">Place your order. Let's try unforgettable meal!</p>
               <button class="flex items-center gap-3 bg-[#001524] text-white px-8 py-4 rounded-full hover:bg-opacity-90 transition-all">
-                  <span>Reservation</span>
+                  <span>Order Now</span>
                   <svg xmlns="http://www.w3.org/2000/svg" class="h-4 w-4" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                       <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14 5l7 7m0 0l-7 7m7-7H3" />
                   </svg>

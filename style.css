@@ -12,6 +12,12 @@
     font-weight: 400;
 }
 
+.context{
+  font-family: myfont;
+  color: #1B2D1F;
+  font-weight: 400;
+}
+
 
 @font-face {
     font-family: myFont; /* set name */
