@@ -7,7 +7,7 @@
     <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
     <script src="https://cdn.jsdelivr.net/npm/alpinejs@3.x.x/dist/cdn.min.js" defer></script>
     <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@200;400;700;800&family=Playfair+Display:ital,wght@0,700;1,700&display=swap" rel="stylesheet">
-   
+   <link href="https://fonts.googleapis.com/css2?family=Lora:wght@600;700&family=Inter:wght@400;500;700&display=swap" rel="stylesheet"> <script defer src="https://unpkg.com/alpinejs@3.x.x/dist/cdn.min.js"></script>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Taviraj:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
@@ -139,186 +139,490 @@
 
 <!-- menu -->
 
-<div class="bg-[#FFF4DE] text-[#001528] antialiased font-plus overflow-x-hidden">
 
-  <div class="max-w-6xl mx-auto px-6 py-12 md:py-24">
-      
-      <div class="text-center mb-24 md:mb-32 opacity-0 translate-y-8 transition-all duration-1000 ease-out" id="header">
-          <span class="text-[10px] tracking-[0.5em] uppercase font-bold text-[#132418] mb-4 block opacity-60">The Art of the Grill</span>
-          <h1 class="font-serif-play text-6xl md:text-8xl text-[#001528] mb-8 italic">Caravan Kaboob house</h1>
-          <div class="h-px bg-[#001528] mx-auto mb-8 w-0 transition-all duration-[1500ms] delay-500" id="header-line"></div>
-       
-      </div>
+<!-- menu start -->
 
-      <section class="mb-32">
-          <div class="flex items-baseline gap-4 mb-16">
-              <h2 class="font-serif-play text-3xl md:text-4xl italic text-[#001528]">Platters</h2>
-              <div class="flex-grow h-px bg-[#132418] opacity-10"></div>
-              <span class="text-[9px] uppercase tracking-widest font-bold text-[#132418] opacity-40">Share the Feast</span>
-          </div>
-          
-          <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6 md:gap-8">
-              <div class="group bg-white p-8 md:p-10 border border-transparent rounded-sm flex flex-col transition-all duration-500 hover:-translate-y-2 hover:shadow-xl hover:border-[#132418]/20">
-                  <span class="text-[9px] font-black uppercase tracking-[0.2em] text-[#132418] opacity-50">01 — Feeds 2-3</span>
-                  <h3 class="text-xl font-extrabold mt-4 mb-6 uppercase tracking-tight text-[#001528]">Value</h3>
-                  <ul class="text-xs space-y-4 text-[#132418] font-medium opacity-70 flex-grow">
-                      <li>• 1 Chicken Skewer</li>
-                      <li>• 2 Kofta Skewers</li>
-                      <li>• Fries, Salad & Rice</li>
-                  </ul>
-              </div>
 
-              <div class="group bg-white p-8 md:p-10 border-t-4 border-[#132418] rounded-sm flex flex-col shadow-sm transition-all duration-500 hover:-translate-y-2 hover:shadow-2xl">
-                  <span class="text-[9px] font-black uppercase tracking-[0.2em] text-[#132418] opacity-50">02 — Feeds 5</span>
-                  <h3 class="text-xl font-extrabold mt-4 mb-6 uppercase tracking-tight text-[#001528]">Max</h3>
-                  <ul class="text-xs space-y-4 text-[#132418] font-medium opacity-70 flex-grow">
-                      <li>• Chicken & Tandoori</li>
-                      <li>• Chicken Kofta Skewer</li>
-                      <li>• 2 Kofta Skewers</li>
-                  </ul>
-              </div>
+    <style>
 
-              <div class="group bg-white p-8 md:p-10 border border-transparent rounded-sm flex flex-col transition-all duration-500 hover:-translate-y-2 hover:shadow-xl hover:border-[#132418]/20">
-                  <span class="text-[9px] font-black uppercase tracking-[0.2em] text-[#132418] opacity-50">03 — Feeds 5</span>
-                  <h3 class="text-xl font-extrabold mt-4 mb-6 uppercase tracking-tight text-[#001528]">Family</h3>
-                  <ul class="text-xs space-y-4 text-[#132418] font-medium opacity-70 flex-grow">
-                      <li>• 1 Whole Chicken</li>
-                      <li>• 2 Chaplee Pieces</li>
-                      <li>• French Fries & Salad</li>
-                  </ul>
-              </div>
+        :root {
 
-              <div class="bg-[#001528] p-8 md:p-10 shadow-2xl rounded-sm lg:-translate-y-4 border border-[#132418] transition-all duration-700 hover:scale-[1.02]">
-                  <span class="text-[9px] uppercase tracking-[0.2em] font-extrabold text-[#FFF4DE] opacity-50">04 — The Feast</span>
-                  <h3 class="font-serif-play text-2xl mt-4 mb-6 italic text-[#FFF4DE]">Ultimate</h3>
-                  <ul class="text-xs space-y-4 text-[#FFF4DE] font-light opacity-80">
-                      <li>• 14 Specialty Skewers</li>
-                      <li>• Hummus & Large Salad</li>
-                      <li>• 5 Fresh Naans</li>
-                  </ul>
-              </div>
-          </div>
-      </section>
+            --cream: #FDF7E7;
 
-      <section class="mb-32">
-          <div class="grid grid-cols-1 lg:grid-cols-12 gap-12 md:gap-16">
-              <div class="lg:col-span-4 border-l border-[#132418]/20 pl-8">
-                  <h2 class="font-serif-play text-5xl text-[#001528] mb-6">Main <br class="hidden lg:block"> Courses</h2>
-                  <p class="text-[10px] uppercase tracking-widest font-black text-[#132418] opacity-40 italic">Signature Dinners</p>
-              </div>
-              
-              <div class="lg:col-span-8 grid grid-cols-1 md:grid-cols-2 gap-x-12 md:gap-x-16 gap-y-12">
-                  <div class="group border-b border-[#132418]/5 pb-6 transition-all duration-300 hover:border-[#132418]/40">
-                      <h4 class="font-extrabold text-sm uppercase tracking-wider text-[#001528] mb-2 group-hover:translate-x-2 transition-transform">Chicken Breast Dinner</h4>
-                      <p class="text-xs text-[#132418] opacity-60 font-medium leading-relaxed">Tender cubes of boneless chicken breast seasoned with mild spices.</p>
-                  </div>
+            --orange: #001527;
 
-                  <div class="group border-b border-[#132418]/5 pb-6 transition-all duration-300 hover:border-[#132418]/40">
-                      <div class="flex items-center justify-between mb-2">
-                          <h4 class="font-extrabold text-sm uppercase tracking-wider text-[#001528] group-hover:translate-x-2 transition-transform">Tandoori Dinner</h4>
-                          <span class="text-[8px] font-black border border-red-200 text-red-700 px-1.5 py-0.5 rounded italic">SPICY</span>
-                      </div>
-                      <p class="text-xs text-[#132418] opacity-60 font-medium leading-relaxed">Marinated in yogurt and spicy tandoori masala, grilled on charcoal.</p>
-                  </div>
-                  
-                  <div class="md:col-span-2 grid grid-cols-1 md:grid-cols-2 gap-8 bg-[#132418] p-8 md:p-12 rounded-sm text-[#FFF4DE] transition-transform duration-500 hover:scale-[1.01]">
-                      <div class="hover:opacity-80 transition-opacity cursor-default">
-                          <h3 class="font-serif-play text-2xl mb-2 italic">Caravan Special</h3>
-                          <p class="text-xs font-light opacity-70 leading-relaxed">Tender dark chicken seasoned with house spices and freshly baked.</p>
-                      </div>
-                      <div class="hover:opacity-80 transition-opacity cursor-default">
-                          <h3 class="font-serif-play text-2xl mb-2 italic">Sultani Dinner</h3>
-                          <p class="text-xs font-light opacity-70 leading-relaxed">Combination of beef tenderloin skewer and traditional kofta kabob.</p>
-                      </div>
-                  </div>
+            --navy: #001527;
 
-                  <div class="group border-b border-[#132418]/5 pb-6">
-                      <h4 class="font-extrabold text-sm uppercase tracking-wider text-[#001528] mb-2">Lamb Shank Dinner</h4>
-                      <p class="text-xs text-[#132418] opacity-60 font-medium leading-relaxed">Lamb shanks slow-simmered for 4 hours. Meltingly tender.</p>
-                  </div>
+            --stone: #78716c;
 
-                  <div class="group border-b border-[#132418]/5 pb-6">
-                      <h4 class="font-extrabold text-sm uppercase tracking-wider text-[#001528] mb-2">Sea Bass</h4>
-                      <p class="text-xs text-[#132418] opacity-60 font-medium leading-relaxed italic underline decoration-[#132418]/20 underline-offset-8">Oven-baked, oil-free, served with lemon and rice.</p>
-                  </div>
-              </div>
-          </div>
-      </section>
+        }
 
-      <section class="mb-32">
-          <div class="bg-white/40 border border-white p-10 md:p-20 rounded-sm text-center backdrop-blur-sm transition-all duration-700 hover:bg-white/60">
-              <h2 class="font-serif-play text-4xl text-[#001528] mb-4 italic">The Wraps</h2>
-              <p class="text-[10px] uppercase font-bold text-[#132418] tracking-[0.4em] mb-12 opacity-50">Served with Garlic & Mint Emulsion</p>
-              <div class="grid grid-cols-2 md:grid-cols-4 gap-y-8 gap-x-4 md:gap-x-12">
-                  <span class="text-[11px] font-black uppercase tracking-widest text-[#001528] hover:-translate-y-1 transition-transform cursor-default">Chicken</span>
-                  <span class="text-[11px] font-black uppercase tracking-widest text-[#001528] hover:-translate-y-1 transition-transform cursor-default">Beef Tikka</span>
-                  <span class="text-[11px] font-black uppercase tracking-widest text-red-900 italic">Spicy Chaplee</span>
-                  <span class="text-[11px] font-black uppercase tracking-widest text-[#001528] hover:-translate-y-1 transition-transform cursor-default">Kofta</span>
-              </div>
-          </div>
-      </section>
+        
 
-      <section class="grid grid-cols-1 md:grid-cols-3 gap-8 md:gap-12">
-          <div class="bg-white p-8 md:p-10 border-l border-[#132418]/10 transition-all duration-300 hover:border-[#132418]">
-              <h3 class="font-serif-play text-3xl text-[#001528] mb-8">Sides</h3>
-              <ul class="space-y-4 text-[10px] font-extrabold uppercase tracking-widest text-[#132418] opacity-70">
-                  <li class="flex justify-between">Hummus <span class="opacity-20">••••</span></li>
-                  <li class="flex justify-between">Boulagnee <span class="opacity-20">••••</span></li>
-                  <li class="flex justify-between">Kabile Rice <span class="opacity-20">••••</span></li>
-                  <li class="flex justify-between text-[#001528] font-black underline underline-offset-4">Whole Chicken</li>
-              </ul>
-          </div>
+        body { 
 
-          <div class="p-8 md:p-10">
-              <h3 class="font-serif-play text-3xl text-[#001528] mb-8">Sweets</h3>
-              <div class="space-y-8">
-                  <div class="hover:translate-x-2 transition-transform duration-300">
-                      <h5 class="text-xs font-black uppercase tracking-widest text-[#001528] mb-2">Firnee</h5>
-                      <p class="text-[10px] text-[#132418] opacity-60 font-medium italic">Afghan ground rice pudding with cardamom.</p>
-                  </div>
-                  <div class="hover:translate-x-2 transition-transform duration-300">
-                      <h5 class="text-xs font-black uppercase tracking-widest text-[#001528] mb-2">Mango Pudding</h5>
-                      <p class="text-[10px] text-[#132418] opacity-60 font-medium italic">Creamy tropical mango puree.</p>
-                  </div>
-              </div>
-          </div>
+            font-family: 'Inter', sans-serif; 
 
-          <div class="bg-[#001528] p-8 md:p-10 text-[#FFF4DE] shadow-xl transition-all duration-500 hover:shadow-[#001528]/20">
-              <h3 class="font-serif-play text-3xl mb-8 italic">Beverages</h3>
-              <ul class="space-y-6 text-[10px] font-bold uppercase tracking-[0.2em]">
-                  <li class="flex justify-between opacity-70"><span>Tea Pot</span></li>
-                  <li class="flex justify-between opacity-70"><span>Mango Juice</span></li>
-                  <li class="flex justify-between text-white font-black underline underline-offset-4 italic"><span>Dough (House)</span></li>
-                  <li class="flex justify-between opacity-70"><span>Coffee / Pop</span></li>
-              </ul>
-          </div>
-      </section>
+            background-color: var(--cream); 
+
+            color: var(--navy);
+
+            scroll-behavior: smooth;
+
+        }
+
+        
+
+        .serif { font-family: 'Lora', serif; }
+
+        
+
+        [x-cloak] { display: none !important; }
 
 
 
-  </div>
+        /* Custom Scrollbar */
 
-  <script>
-      window.onload = () => {
-          const header = document.getElementById('header');
-          const line = document.getElementById('header-line');
-          header.classList.remove('opacity-0', 'translate-y-8');
-          header.classList.add('opacity-100', 'translate-y-0');
-          line.classList.remove('w-0');
-          line.classList.add('w-24');
-      }
-  </script>
-</div>
+        .custom-scrollbar::-webkit-scrollbar { height: 3px; }
+
+        .custom-scrollbar::-webkit-scrollbar-track { background: transparent; }
+
+        .custom-scrollbar::-webkit-scrollbar-thumb { background: var(--orange); border-radius: 10px; }
 
 
 
+        /* Card Hover Animations */
+
+        .menu-card {
+
+            transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+
+            border: 1px solid rgba(11, 28, 42, 0.05);
+
+        }
+
+        .menu-card:hover {
+
+            transform: translateY(-8px) scale(1.01);
+
+            box-shadow: 0 20px 25px -5px rgba(11, 28, 42, 0.1), 0 10px 10px -5px rgba(11, 28, 42, 0.04);
+
+            border-color: var(--orange);
+
+        }
 
 
 
-<!-- menu end  salads-->
+        /* Underline Animation */
+
+        .nav-btn { position: relative; }
+
+        .nav-btn::after {
+
+            content: '';
+
+            position: absolute;
+
+            bottom: -2px;
+
+            left: 0;
+
+            width: 0;
+
+            height: 2px;
+
+            background: var(--orange);
+
+            transition: width 0.3s ease;
+
+        }
+
+        .nav-btn.active::after { width: 100%; }
+
+    </style>
+
+<main x-data="{ activeSection: 'mains', loaded: false }" x-init="setTimeout(() => loaded = true, 100)">
+
+
+
+    <header class="sticky top-0 z-50 bg-white/90 backdrop-blur-md border-b border-stone-200">
+
+        <div class="max-w-6xl mx-auto px-6 py-5">
+
+            <div class="flex justify-between items-center mb-6">
+
+                <div class="flex flex-col">
+
+                    <!-- <h1 class="serif text-3xl font-bold tracking-tighter text-[#0B1C2A]">
+
+                        Caravan Kabob House
+
+                    </h1> -->
+
+                    <!-- <div class="h-1 w-12 bg-[#C2410C] mt-1 rounded-full"></div> -->
+
+                </div>
+
+                
+
+            </div>
+
+            
+
+            <nav class="flex gap-8 overflow-x-auto custom-scrollbar pb-3 no-scrollbar text-xs font-bold uppercase tracking-widest">
+
+                <button @click="activeSection = 'mains'" :class="activeSection === 'mains' ? 'text-[#C2410C] active' : 'opacity-40 hover:opacity-100'" class="nav-btn pb-1 transition-all duration-300">Mains</button>
+
+                <button @click="activeSection = 'platters'" :class="activeSection === 'platters' ? 'text-[#C2410C] active' : 'opacity-40 hover:opacity-100'" class="nav-btn pb-1 transition-all duration-300">Platters</button>
+
+                <button @click="activeSection = 'wraps'" :class="activeSection === 'wraps' ? 'text-[#C2410C] active' : 'opacity-40 hover:opacity-100'" class="nav-btn pb-1 transition-all duration-300">Wraps</button>
+
+                <button @click="activeSection = 'others'" :class="activeSection === 'others' ? 'text-[#C2410C] active' : 'opacity-40 hover:opacity-100'" class="nav-btn pb-1 transition-all duration-300">Sides & Drinks</button>
+
+            </nav>
+
+        </div>
+
+    </header>
+
+
+
+    <main class="max-w-6xl mx-auto px-6 py-12" x-show="loaded" x-transition:enter="transition ease-out duration-1000" x-transition:enter-start="opacity-0 translate-y-10">
+
+
+
+        <section x-show="activeSection === 'mains'" x-transition:enter="transition ease-out duration-500" x-transition:enter-start="opacity-0 scale-95">
+
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+
+                <template x-for="(item, index) in [
+
+                    {title: 'CHICKEN BREAST DINNER', price: '$25.99', desc: 'Tender cubes of boneless chicken breast seasoned with our special mild house spices and grilled to perfection.', img:'./public/images/chickenbrest.png' },
+
+                    {title: 'TANDOORI DINNER', price: '$25.99', desc: 'Tender cubes of boneless chicken marinated in yogurt, seasoned with spicy tandoori masala.', img:'./public/images/tandoori.png'},
+
+                    {title: 'TIKKA DINNER', price: '$27.99', desc: 'Beef tenderloin cubes marinated in our specialty mild house seasoning.', img:'./public/images/tikka.png'},
+
+                    {title: 'CHICKEN CHAPLEE DINNER', price: '$24.99', desc: 'Ground chicken patties, green chilies, fresh mint and coriander leaves plus our spicy house specialty spices.', img:'./public/images/chaplee.png'},
+
+                    {title: 'CHAPLEE DINNER', price: '$25.99', desc: 'Minced beef patty, green chilies, egg, fresh mint and coriander leaves plus our spicy house specialty spices.',img:'./public/images/chaplee2.png'},
+
+                    {title: 'WAZERI DINNER', price: '$30.99', desc: 'Combination of chicken breast skewer and kofta kabob skewer prepared with house spices (mild).', img:'./public/images/wazeri.png'},
+
+                    {title: 'SULTANI DINNER', price: '$32.99', desc: 'Combination of beef tenderloin skewer and kofta kabob skewer prepared with our house specialty spices.', img:'./public/images/sultani.png'},
+
+                    {title: 'TANDOORI KOFTA DINNER', price: '$28.99', desc: 'Combination of spicy tandoori chicken breast with ground beef skewer. Includes Salad & Naan.',img:'./public/images/kofta.png'},
+
+                    {title: 'KOFTA DINNER', price: '$23.99', desc: '2 minced beef skewers with mild in-house specialty seasoning.', img:'./public/images/kofta.png'},
+
+                    {title: 'CHICKEN KOFTA DINNER', price: '$23.99', desc: 'Two skewers of mild ground chicken marinated in our specialty house seasoning. Includes Salad & Naan.', img:'./public/images/kofta2.png'},
+
+                    {title: 'SPICY GROUND CHICKEN', price: '$24.99', desc: '2 minced chicken skewers with spicy tandoori in-house specialty seasoning.', img:'./public/images/kofta3.png'},
+
+                    {title: 'HALF CHICKEN DINNER', price: '$26.99', desc: 'Half chicken marinated in yogurt and our specialty tandoori seasoning (spicy).', img:'./public/images/chickenbrest.png'},
+
+                    {title: 'LAMB SHANK DINNER', price: '$33.99', desc: 'Lamb shanks simmered to perfection for 4 hours. *Size varies.', img:'./public/images/halfchicken.png'},
+
+                    {title: 'CHOPAN DINNER', price: '$35.99', desc: 'Tender lamb chops marinated in our specialty seasoning and fresh herbs.', img:'./public/images/lambshank.png'},
+
+                    {title: 'SEA BASS DINNER', price: '$38.99', desc: 'Whole sea bass, oven-baked and oil-free. Served with rice, salad and bread.', img:'./public/images/seabass.png'},
+
+                    {title: 'FISH AND CHIPS', price: '$20.99', desc: 'Crispy battered haddock fillet, French fries and tartar sauce.', img:'./public/images/fishandchips.png'},
+
+                    {title: 'CHAPLEE BURGER', price: '$18.99', desc: 'Minced beef patty with fresh herbs. Combo with fries and a canned drink.', img:'./public/images/chapleeburger.png'},
+
+                    {title: 'GRILLED SALMON DINNER', price: '$29.99', desc: '6oz Atlantic salmon fillet, seasoned and oven-baked oil-free.',img:'./public/images/salmon.png'},
+
+                    {title: 'MANTU (DUMPLINGS)', price: '$22.99', desc: 'Seasoned meat and onions in a tender wrapper, topped with herby yogurt sauce.', img:'./public/images/mantu.png'},
+
+                    {title: 'CARAVAN SPECIAL', price: '$34.99', desc: 'Tender cubes of dark chicken spicy seasoned and freshly baked.', img:'./public/images/caravanspecial.png'}
+
+                ]">
+
+                    <div class="menu-card bg-white p-5 rounded-2xl flex gap-5 items-center group">
+
+                        <div class="relative overflow-hidden rounded-xl shrink-0">
+
+                            <img :src="item.img" class="w-24 h-24 object-cover transition-transform duration-500 group-hover:scale-110" :alt="item.title">
+
+                        </div>
+
+                        <div class="flex-grow">
+
+                            <div class="flex justify-between items-start">
+
+                                <h3 class="serif font-bold text-sm tracking-wide text-[#0B1C2A]" x-text="item.title"></h3>
+
+                                <span class="text-[#C2410C] font-extrabold text-sm" x-text="item.price"></span>
+
+                            </div>
+
+                            <p class="text-[12px] text-stone-500 mt-2 leading-relaxed" x-text="item.desc"></p>
+
+                        </div>
+
+                    </div>
+
+                </template>
+
+            </div>
+
+        </section>
+
+
+
+        <section x-show="activeSection === 'platters'" x-cloak x-transition:enter="transition ease-out duration-500" x-transition:enter-start="opacity-0 translate-x-10">
+
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+
+                <div class="menu-card bg-white p-8 rounded-3xl border-l-8 border-[#C2410C]">
+
+                    <div class="flex justify-between items-center mb-6">
+
+                        <h3 class="serif text-2xl font-bold">Value Platter</h3>
+
+                        <span class="bg-[#FDF7E7] text-[#C2410C] text-[10px] font-black px-3 py-1 rounded-full border border-[#C2410C]/20">FEEDS 2-3</span>
+
+                    </div>
+
+                    <p class="text-sm text-stone-600 leading-relaxed">1 Chicken Skewer, 1 French Fries, 1 Afghani Salad, 2 Kofta Skewers, 2 Sides of Rice, 2 Naans</p>
+
+                </div>
+
+                
+
+                <div class="menu-card bg-white p-8 rounded-3xl border-l-8 border-[#C2410C]">
+
+                    <div class="flex justify-between items-center mb-6">
+
+                        <h3 class="serif text-2xl font-bold">Max Platter</h3>
+
+                        <span class="bg-[#FDF7E7] text-[#C2410C] text-[10px] font-black px-3 py-1 rounded-full border border-[#C2410C]/20">FEEDS 5</span>
+
+                    </div>
+
+                    <p class="text-sm text-stone-600 leading-relaxed">1 Chicken Skewer, 1 French Fries, 1 Afghani Salad, 1 Tandoori Skewer, 1 Chicken Kofta Skewer, 2 Kofta Skewers, 2 Sides of Rice, 4 Naans</p>
+
+                </div>
+
+
+
+                <div class="menu-card bg-white p-8 rounded-3xl border-l-8 border-[#C2410C]">
+
+                    <div class="flex justify-between items-center mb-6">
+
+                        <h3 class="serif text-2xl font-bold">Family Platter</h3>
+
+                        <span class="bg-[#FDF7E7] text-[#C2410C] text-[10px] font-black px-3 py-1 rounded-full border border-[#C2410C]/20">FEEDS 5</span>
+
+                    </div>
+
+                    <p class="text-sm text-stone-600 leading-relaxed">1 Whole Chicken, 1 French Fries, 1 Afghani Salad, 2 Chaplee Pieces, 2 Sides of Rice, 4 Naans</p>
+
+                </div>
+
+
+
+                <div class="bg-[#0B1C2A] text-white p-10 rounded-3xl relative overflow-hidden ring-8 ring-[#C2410C]/10 shadow-2xl">
+
+                    <div class="absolute top-0 right-0 w-32 h-32 bg-[#C2410C] opacity-10 rounded-full -mr-16 -mt-16"></div>
+
+                    <div class="relative z-10">
+
+                        <div class="flex justify-between items-center mb-6">
+
+                            <h3 class="serif text-3xl font-bold text-[#FDF7E7]">Ultimate Platter</h3>
+
+                            <span class="bg-[#C2410C] text-white text-[11px] font-black px-4 py-1 rounded-full shadow-lg">FEEDS 10</span>
+
+                        </div>
+
+                        <p class="text-base text-stone-300 italic mb-4 leading-relaxed font-light">
+
+                            2 Chicken Skewers, 2 Tandoori Skewers, 5 Chicken Kofta Skewers, 5 Kofta Skewers, 5 Naans, 3 Sides of Rice, 1 French Fries, 1 Large Afghani Salad, 1 Hummus
+
+                        </p>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+        </section>
+
+
+
+        <section x-show="activeSection === 'wraps'" x-cloak x-transition:enter="transition ease-out duration-500" x-transition:enter-start="opacity-0 -translate-y-10">
+
+            <div class="bg-white rounded-[2rem] p-10 shadow-sm border border-stone-100">
+
+                <div class="text-center mb-12">
+
+                    <span class="text-[#C2410C] font-black uppercase tracking-[0.3em] text-[10px] border-b-2 border-[#C2410C] pb-2">Signature Hand-Rolled Wraps</span>
+
+                    <p class="mt-6 text-stone-500 text-sm italic">Wrapped in fresh clay-oven naan with house-made garlic & mint yogurt sauces</p>
+
+                </div>
+
+                <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
+
+                    <template x-for="wrap in ['Chicken Wrap', 'Beef Tikka Wrap', 'Chaplee Wrap (Spicy)', 'Kofta Wrap', 'Veggie Wrap', 'Tandoori Wrap', 'Chicken Kofta Wrap', 'Chicken Curry Wrap', 'Haddock Wrap (Breaded)', 'Tilapia Wrap (7-9oz)', 'Tandoori Tilapia Wrap']">
+
+                        <div class="flex items-center p-4 rounded-2xl hover:bg-[#FDF7E7] transition-all duration-300 group cursor-default border border-transparent hover:border-[#C2410C]/20">
+
+                            <div class="w-2 h-2 rounded-full bg-[#C2410C] mr-4 shadow-[0_0_8px_rgba(194,65,12,0.4)] group-hover:scale-150 transition-transform"></div>
+
+                            <span class="serif text-base font-bold text-[#0B1C2A]" x-text="wrap"></span>
+
+                        </div>
+
+                    </template>
+
+                </div>
+
+            </div>
+
+        </section>
+
+
+
+        <section x-show="activeSection === 'others'" x-cloak x-transition:enter="transition ease-out duration-500" x-transition:enter-start="opacity-0 scale-105" class="space-y-12">
+
+            <div class="grid grid-cols-1 lg:grid-cols-3 gap-8">
+
+                <div class="space-y-8">
+
+                    <div class="bg-white p-8 rounded-3xl shadow-sm border border-stone-100 hover:shadow-md transition-shadow">
+
+                        <h3 class="serif text-xl font-bold mb-6 text-[#0B1C2A] flex items-center">
+
+                            <span class="w-8 h-px bg-[#C2410C] mr-3"></span> Caravan Kids
+
+                        </h3>
+
+                        <ul class="text-sm space-y-4 text-stone-600">
+
+                            <li class="flex justify-between items-center font-medium"><span>Homemade Beef Burger</span> <span class="h-px flex-grow mx-4 bg-stone-100"></span></li>
+
+                            <li class="flex justify-between items-center font-medium"><span>Homemade Chicken Burger</span> <span class="h-px flex-grow mx-4 bg-stone-100"></span></li>
+
+                            <li class="flex justify-between items-center font-medium"><span>Chicken Nuggets <small class="opacity-50">(6 pcs)</small></span> <span class="h-px flex-grow mx-4 bg-stone-100"></span></li>
+
+                            <li class="flex justify-between items-center font-medium"><span>Kofta Skewer</span> <span class="h-px flex-grow mx-4 bg-stone-100"></span></li>
+
+                            <li class="flex justify-between items-center font-medium"><span>Chicken Strips <small class="opacity-50">(5 pcs)</small></span> <span class="h-px flex-grow mx-4 bg-stone-100"></span></li>
+
+                        </ul>
+
+                    </div>
+
+
+
+                    <div class="bg-white p-8 rounded-3xl shadow-sm border border-stone-100 hover:shadow-md transition-shadow">
+
+                        <h3 class="serif text-xl font-bold mb-6 text-[#0B1C2A] flex items-center">
+
+                            <span class="w-8 h-px bg-[#C2410C] mr-3"></span> Fresh Salads
+
+                        </h3>
+
+                        <ul class="text-sm space-y-4 text-stone-600 font-medium">
+
+                            <li class="flex items-center"><span class="w-1.5 h-1.5 rounded-full bg-[#C2410C] mr-3"></span> Afghani Salad</li>
+
+                            <li class="flex items-center"><span class="w-1.5 h-1.5 rounded-full bg-[#C2410C] mr-3"></span> Greek Salad</li>
+
+                            <li class="flex items-center"><span class="w-1.5 h-1.5 rounded-full bg-[#C2410C] mr-3"></span> Caesar Salad</li>
+
+                        </ul>
+
+                    </div>
+
+                </div>
+
+
+
+                <div class="bg-[#0B1C2A] text-white p-8 rounded-3xl lg:col-span-1 shadow-2xl relative">
+
+                    <h3 class="serif text-2xl font-bold mb-8 text-[#C2410C]">Authentic Sides</h3>
+
+                    <div class="grid grid-cols-2 gap-4 text-[10px] font-bold uppercase tracking-widest">
+
+                        <template x-for="side in ['Hummus', 'French Fries', 'Boulagnee', 'Chicken Curry', 'Kabile Rice', 'Naan', 'Keema Kofta', 'Rice', 'Whole Chicken', 'Yogurt', 'Okra']">
+
+                            <span class="p-3 border border-white/10 rounded-xl text-center hover:bg-[#C2410C] hover:border-[#C2410C] transition-all duration-300 cursor-default" x-text="side"></span>
+
+                        </template>
+
+                    </div>
+
+                </div>
+
+
+
+                <div class="bg-white p-8 rounded-3xl shadow-sm border border-stone-100 hover:shadow-md transition-shadow">
+
+                    <h3 class="serif text-xl font-bold mb-8 text-[#0B1C2A] flex items-center">
+
+                        <span class="w-8 h-px bg-[#C2410C] mr-3"></span> Drinks & Treats
+
+                    </h3>
+
+                    <div class="space-y-8">
+
+                        <div>
+
+                            <p class="text-[10px] font-black uppercase tracking-[0.2em] text-[#C2410C] mb-3">Sweet Endings</p>
+
+                            <p class="text-base font-bold text-[#0B1C2A]">Firnee, Mango Pudding</p>
+
+                        </div>
+
+                        <div class="space-y-4">
+
+                            <p class="text-[10px] font-black uppercase tracking-[0.2em] text-[#C2410C] mb-3">Beverages</p>
+
+                            <div class="text-sm space-y-3 font-medium text-stone-600">
+
+                                <p class="flex justify-between border-b border-stone-50 pb-1"><span>Tea <small class="text-stone-400 font-normal">(Cup/Pot)</small></span> <span class="text-[10px] opacity-60">GRN/BLK/FLAV</span></p>
+
+                                <p class="flex justify-between border-b border-stone-50 pb-1"><span>Mango Juice</span></p>
+
+                                <p class="flex justify-between border-b border-stone-50 pb-1"><span>Dough <small class="text-stone-400 font-normal">(Yogurt Drink)</small></span></p>
+
+                                <p class="flex justify-between border-b border-stone-50 pb-1"><span>Brewed Coffee</span></p>
+
+                                <p class="flex justify-between"><span>Bottled Beverages / Pop</span></p>
+
+                            </div>
+
+                        </div>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+        </section>
+
+    </main>
+
+
+
+   
+
+</main>
+
+
+
+<!-- menu end -->
+
+
 
 <!-- gallery -->
-<div class="bg-[#001528] py-16 px-4">
+<!-- <div class="bg-[#001528] py-16 px-4">
     <div class="max-w-7xl mx-auto">
       
       <h2 class="text-4xl md:text-5xl font-[taviraj] text-[#FFF4DE] text-center mb-12 tracking-wide">
@@ -365,7 +669,7 @@
   
       </div>
     </div>
-  </div>
+  </div> -->
 <!-- gallery end -->
 
 
